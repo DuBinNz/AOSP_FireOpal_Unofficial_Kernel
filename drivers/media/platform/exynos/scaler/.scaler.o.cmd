@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/exynos/scaler/scaler.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/media/platform/exynos/scaler/scaler.o drivers/media/platform/exynos/scaler/scaler-core.o drivers/media/platform/exynos/scaler/scaler-regs.o 

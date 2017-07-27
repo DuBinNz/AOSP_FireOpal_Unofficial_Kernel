@@ -1,0 +1,1 @@
+cmd_drivers/net/phy/libphy.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/net/phy/libphy.o drivers/net/phy/phy.o drivers/net/phy/phy_device.o drivers/net/phy/mdio_bus.o 

@@ -1,0 +1,1 @@
+cmd_sound/soc/samsung/snd-soc-eax-dma.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o sound/soc/samsung/snd-soc-eax-dma.o sound/soc/samsung/eax-dma.o 

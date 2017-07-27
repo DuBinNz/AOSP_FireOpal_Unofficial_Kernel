@@ -1,0 +1,1 @@
+cmd_drivers/video/fbdev/core/fb.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/video/fbdev/core/fb.o drivers/video/fbdev/core/fbmem.o drivers/video/fbdev/core/fbmon.o drivers/video/fbdev/core/fbcmap.o drivers/video/fbdev/core/fbsysfs.o drivers/video/fbdev/core/modedb.o drivers/video/fbdev/core/fbcvt.o 

@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/exynos/mdev/mdev.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/media/platform/exynos/mdev/mdev.o drivers/media/platform/exynos/mdev/exynos-mdev.o 

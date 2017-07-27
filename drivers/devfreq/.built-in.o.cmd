@@ -1,0 +1,1 @@
+cmd_drivers/devfreq/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/devfreq/built-in.o drivers/devfreq/devfreq.o drivers/devfreq/governor_simpleondemand.o drivers/devfreq/governor_simpleexynos.o drivers/devfreq/exynos/built-in.o 

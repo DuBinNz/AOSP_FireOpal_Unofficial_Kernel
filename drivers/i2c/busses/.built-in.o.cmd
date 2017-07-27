@@ -1,0 +1,1 @@
+cmd_drivers/i2c/busses/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/i2c/busses/built-in.o drivers/i2c/busses/i2c-exynos5.o drivers/i2c/busses/i2c-gpio.o 

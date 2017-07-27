@@ -1,0 +1,1 @@
+cmd_drivers/mmc/host/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/mmc/host/built-in.o drivers/mmc/host/dw_mmc.o drivers/mmc/host/dw_mmc-pltfm.o drivers/mmc/host/dw_mmc-exynos.o 

@@ -1,0 +1,1 @@
+cmd_drivers/usb/gadget/function/usb_f_acm.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/usb/gadget/function/usb_f_acm.o drivers/usb/gadget/function/f_acm.o 

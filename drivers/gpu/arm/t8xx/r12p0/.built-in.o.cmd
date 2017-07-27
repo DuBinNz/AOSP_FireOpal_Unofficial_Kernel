@@ -1,0 +1,1 @@
+cmd_drivers/gpu/arm/t8xx/r12p0/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/gpu/arm/t8xx/r12p0/built-in.o drivers/gpu/arm/t8xx/r12p0/platform/built-in.o drivers/gpu/arm/t8xx/r12p0/mali_kbase.o 

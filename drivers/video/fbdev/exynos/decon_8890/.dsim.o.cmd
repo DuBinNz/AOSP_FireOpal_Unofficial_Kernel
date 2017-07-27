@@ -1,0 +1,1 @@
+cmd_drivers/video/fbdev/exynos/decon_8890/dsim.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/video/fbdev/exynos/decon_8890/dsim.o drivers/video/fbdev/exynos/decon_8890/dsim_drv.o drivers/video/fbdev/exynos/decon_8890/dsim_reg_8890.o 

@@ -1,0 +1,1 @@
+cmd_drivers/input/keyboard/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/input/keyboard/built-in.o drivers/input/keyboard/atkbd.o drivers/input/keyboard/gpio_keys.o drivers/input/keyboard/samsung-keypad.o drivers/input/keyboard/abov_touchkey.o drivers/input/keyboard/cypress/built-in.o 

@@ -1,0 +1,1 @@
+cmd_drivers/dma/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/dma/built-in.o drivers/dma/dmaengine.o drivers/dma/of-dma.o drivers/dma/pl330.o drivers/dma/samsung-dma.o drivers/dma/xilinx/built-in.o 

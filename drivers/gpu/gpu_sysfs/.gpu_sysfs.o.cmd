@@ -1,0 +1,1 @@
+cmd_drivers/gpu/gpu_sysfs/gpu_sysfs.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/gpu/gpu_sysfs/gpu_sysfs.o drivers/gpu/gpu_sysfs/gpu_sysfs_main.o drivers/gpu/gpu_sysfs/gpu_sysfs_util.o drivers/gpu/gpu_sysfs/gpu_sysfs_target_exynos8890.o 

@@ -1,0 +1,120 @@
+
+=========================================================
+START : FUNC_CLEAN_DTB
+=========================================================
+
+Delete files in: /home/muhammed/Desktop/AOSP_FireOpal_Pure_Kernel/arch/arm64/boot/dts/*.dtb
+Delete dtb.img generated from previous build
+Delete Image generated from previous build
+
+=========================================================
+END   : FUNC_CLEAN_DTB
+=========================================================
+
+
+=========================================================
+START : FUNC_BUILD_KERNEL
+=========================================================
+
+Build common config:	kylothow-hero2lte-eur_defconfig
+Build model config:	hero2lte
+
+#
+# configuration written to .config
+#
+scripts/kconfig/conf --silentoldconfig Kconfig
+  CHK     include/config/kernel.release
+  CHK     include/generated/uapi/linux/version.h
+  CHK     include/generated/utsrelease.h
+  DTC     arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_08.dtb
+  CALL    scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  OBJCOPY arch/arm64/boot/Image
+  GZIP    arch/arm64/boot/Image.gz
+
+=========================================================
+END   : FUNC_BUILD_KERNEL
+=========================================================
+
+
+=========================================================
+START : FUNC_BUILD_DTIMAGE_TARGET
+=========================================================
+
+Processing dts files...
+
+=> Processing: exynos8890-hero2lte_eur_open_00.dts
+=> Generating: exynos8890-hero2lte_eur_open_00.dtb
+=> Processing: exynos8890-hero2lte_eur_open_01.dts
+=> Generating: exynos8890-hero2lte_eur_open_01.dtb
+=> Processing: exynos8890-hero2lte_eur_open_03.dts
+=> Generating: exynos8890-hero2lte_eur_open_03.dtb
+=> Processing: exynos8890-hero2lte_eur_open_04.dts
+=> Generating: exynos8890-hero2lte_eur_open_04.dtb
+=> Processing: exynos8890-hero2lte_eur_open_08.dts
+=> Generating: exynos8890-hero2lte_eur_open_08.dtb
+
+Generating dtb.img...
+
+=> Found compatible entry: samsung,exynos8890
+    (chip: 8890, hw_rev: 0, hw_rev_end: 0)
+=> Found compatible entry: samsung,exynos8890
+    (chip: 8890, hw_rev: 1, hw_rev_end: 2)
+=> Found compatible entry: samsung,exynos8890
+    (chip: 8890, hw_rev: 3, hw_rev_end: 3)
+=> Found compatible entry: samsung,exynos8890
+    (chip: 8890, hw_rev: 4, hw_rev_end: 7)
+=> Found compatible entry: samsung,exynos8890
+    (chip: 8890, hw_rev: 8, hw_rev_end: 10)
+
+=========================================================
+END   : FUNC_BUILD_DTIMAGE_TARGET
+=========================================================
+
+
+=========================================================
+START : FUNC_BUILD_ZIP
+=========================================================
+
+Output: Fire_Opal-AK-v3.1.0-hero2lte.zip
+
+  adding: anykernel.sh (deflated 62%)
+  adding: dtb (deflated 78%)
+  adding: META-INF/ (stored 0%)
+  adding: META-INF/com/ (stored 0%)
+  adding: META-INF/com/google/ (stored 0%)
+  adding: META-INF/com/google/android/ (stored 0%)
+  adding: META-INF/com/google/android/updater-script (stored 0%)
+  adding: META-INF/com/google/android/update-binary (deflated 66%)
+  adding: ramdisk/ (stored 0%)
+  adding: ramdisk/spec/ (stored 0%)
+  adding: ramdisk/spec/balance.profile (deflated 85%)
+  adding: ramdisk/spec/gaming.profile (deflated 85%)
+  adding: ramdisk/spec/battery.profile (deflated 81%)
+  adding: ramdisk/spec/performance.profile (deflated 85%)
+  adding: ramdisk/init.services.rc (deflated 67%)
+  adding: ramdisk/init.spectrum.rc (deflated 67%)
+  adding: ramdisk/init.spectrum.sh (deflated 28%)
+  adding: ramdisk/fstab.samsungexynos8890 (deflated 77%)
+  adding: ramdisk/sbin/ (stored 0%)
+  adding: ramdisk/sbin/kernelinit.sh (deflated 74%)
+  adding: ramdisk/sbin/resetprop (deflated 60%)
+  adding: ramdisk/sbin/spec.sh (deflated 29%)
+  adding: ramdisk/sbin/busybox (deflated 27%)
+  adding: ramdisk/sbin/busybox.sh (deflated 52%)
+  adding: ramdisk/sbin/sysinit.sh (deflated 60%)
+  adding: ramdisk/sbin/wakelocks.sh (deflated 75%)
+  adding: tools/ (stored 0%)
+  adding: tools/mkbootfs (deflated 48%)
+  adding: tools/mkbootimg (deflated 35%)
+  adding: tools/unpackbootimg (deflated 34%)
+  adding: tools/ak2-core.sh (deflated 74%)
+  adding: tools/busybox (deflated 38%)
+  adding: zImage (deflated 70%)
+
+=========================================================
+END   : FUNC_BUILD_ZIP
+=========================================================
+
+Total compile time was 17 seconds.
+

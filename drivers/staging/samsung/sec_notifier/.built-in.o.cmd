@@ -1,0 +1,1 @@
+cmd_drivers/staging/samsung/sec_notifier/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/staging/samsung/sec_notifier/built-in.o drivers/staging/samsung/sec_notifier/vbus_notifier.o 

@@ -1,0 +1,1 @@
+cmd_drivers/input/touchscreen/sec_ts/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/input/touchscreen/sec_ts/built-in.o drivers/input/touchscreen/sec_ts/sec_ts.o drivers/input/touchscreen/sec_ts/sec_ts_fw.o drivers/input/touchscreen/sec_ts/sec_ts_fn.o 

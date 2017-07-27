@@ -1,0 +1,1 @@
+cmd_drivers/pci/pcie/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/pci/pcie/built-in.o drivers/pci/pcie/pcieportdrv.o drivers/pci/pcie/aer/built-in.o drivers/pci/pcie/pme.o 

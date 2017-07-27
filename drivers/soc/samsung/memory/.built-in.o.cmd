@@ -1,0 +1,1 @@
+cmd_drivers/soc/samsung/memory/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/soc/samsung/memory/built-in.o drivers/soc/samsung/memory/syms.o drivers/soc/samsung/memory/memcpy_pld2.o drivers/soc/samsung/memory/copy_to_user_pld2.o 

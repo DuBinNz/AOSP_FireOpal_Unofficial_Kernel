@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/exynos/mfc/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/media/platform/exynos/mfc/built-in.o drivers/media/platform/exynos/mfc/s5p-mfc.o drivers/media/platform/exynos/mfc/s5p_mfc_opr_v6.o drivers/media/platform/exynos/mfc/s5p_mfc_cmd_v6.o 

@@ -1,0 +1,1 @@
+cmd_drivers/usb/dwc3/dwc3.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/usb/dwc3/dwc3.o drivers/usb/dwc3/core.o drivers/usb/dwc3/debug.o drivers/usb/dwc3/trace.o drivers/usb/dwc3/otg.o drivers/usb/dwc3/host.o drivers/usb/dwc3/gadget.o drivers/usb/dwc3/ep0.o drivers/usb/dwc3/debugfs.o 

@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/exynos/fimc-is2/sensor/csi2/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/media/platform/exynos/fimc-is2/sensor/csi2/built-in.o drivers/media/platform/exynos/fimc-is2/sensor/csi2/fimc-is-hw-csi-v4_0.o 

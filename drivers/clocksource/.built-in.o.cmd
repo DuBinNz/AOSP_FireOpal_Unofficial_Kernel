@@ -1,0 +1,1 @@
+cmd_drivers/clocksource/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/clocksource/built-in.o drivers/clocksource/clksrc-of.o drivers/clocksource/exynos_mct.o drivers/clocksource/arm_arch_timer.o drivers/clocksource/dummy_timer.o 

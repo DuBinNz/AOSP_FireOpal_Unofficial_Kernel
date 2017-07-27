@@ -1,0 +1,1 @@
+cmd_drivers/usb/host/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/usb/host/built-in.o drivers/usb/host/pci-quirks.o drivers/usb/host/xhci-pci.o drivers/usb/host/xhci-plat-hcd.o drivers/usb/host/xhci-hcd.o 

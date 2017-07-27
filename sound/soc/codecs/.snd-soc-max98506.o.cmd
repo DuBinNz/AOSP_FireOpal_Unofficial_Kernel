@@ -1,0 +1,1 @@
+cmd_sound/soc/codecs/snd-soc-max98506.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o sound/soc/codecs/snd-soc-max98506.o sound/soc/codecs/max98506.o 

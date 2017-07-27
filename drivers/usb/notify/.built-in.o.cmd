@@ -1,0 +1,1 @@
+cmd_drivers/usb/notify/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/usb/notify/built-in.o drivers/usb/notify/host_notify_class.o drivers/usb/notify/external_notify.o drivers/usb/notify/usblog_proc_notify.o drivers/usb/notify/usb_notify_layer.o drivers/usb/notify/usb_notifier.o 

@@ -1,0 +1,1 @@
+cmd_sound/soc/samsung/snd-soc-compr.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o sound/soc/samsung/snd-soc-compr.o sound/soc/samsung/compr.o sound/soc/samsung/visualizercap-dummydai.o 

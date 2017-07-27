@@ -1,0 +1,1 @@
+cmd_drivers/power/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/power/built-in.o drivers/power/power_supply.o drivers/power/reset/built-in.o 

@@ -1,0 +1,1 @@
+cmd_drivers/phy/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/phy/built-in.o drivers/phy/phy-core.o drivers/phy/phy-exynos-mipi.o drivers/phy/phy-exynos-usbdrd.o drivers/phy/phy-samsung-usb3-cal.o 

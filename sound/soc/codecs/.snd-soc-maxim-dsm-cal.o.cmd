@@ -1,0 +1,1 @@
+cmd_sound/soc/codecs/snd-soc-maxim-dsm-cal.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o sound/soc/codecs/snd-soc-maxim-dsm-cal.o sound/soc/codecs/maxim_dsm_cal.o sound/soc/codecs/maxim_dsm_power.o 

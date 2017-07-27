@@ -1,0 +1,1 @@
+cmd_sound/soc/samsung/snd-soc-i2s.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o sound/soc/samsung/snd-soc-i2s.o sound/soc/samsung/i2s.o 

@@ -1,0 +1,1 @@
+cmd_drivers/video/fbdev/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/video/fbdev/built-in.o drivers/video/fbdev/core/built-in.o drivers/video/fbdev/exynos/built-in.o drivers/video/fbdev/omap2/built-in.o drivers/video/fbdev/simplefb.o 

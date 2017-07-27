@@ -1,0 +1,1 @@
+cmd_drivers/mailbox/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/mailbox/built-in.o drivers/mailbox/mailbox.o drivers/mailbox/samsung/built-in.o 

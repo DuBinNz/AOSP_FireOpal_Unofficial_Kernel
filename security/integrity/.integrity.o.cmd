@@ -1,0 +1,1 @@
+cmd_security/integrity/integrity.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o security/integrity/integrity.o security/integrity/iint.o security/integrity/integrity_audit.o 

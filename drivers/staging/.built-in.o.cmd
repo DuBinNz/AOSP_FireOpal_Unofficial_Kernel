@@ -1,0 +1,1 @@
+cmd_drivers/staging/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/staging/built-in.o drivers/staging/staging.o drivers/staging/media/built-in.o drivers/staging/iio/built-in.o drivers/staging/android/built-in.o drivers/staging/samsung/built-in.o 

@@ -1,0 +1,1 @@
+cmd_drivers/scsi/ufs/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/scsi/ufs/built-in.o drivers/scsi/ufs/ufshcd.o drivers/scsi/ufs/ufs_quirks.o drivers/scsi/ufs/ufshcd-pltfrm.o drivers/scsi/ufs/ufs-exynos.o 

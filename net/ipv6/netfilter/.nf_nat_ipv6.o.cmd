@@ -1,0 +1,1 @@
+cmd_net/ipv6/netfilter/nf_nat_ipv6.o := ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o net/ipv6/netfilter/nf_nat_ipv6.o net/ipv6/netfilter/nf_nat_l3proto_ipv6.o net/ipv6/netfilter/nf_nat_proto_icmpv6.o 

@@ -1,0 +1,1 @@
+cmd_lib/reed_solomon/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o lib/reed_solomon/built-in.o lib/reed_solomon/reed_solomon.o 

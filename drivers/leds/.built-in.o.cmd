@@ -1,0 +1,1 @@
+cmd_drivers/leds/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/leds/built-in.o drivers/leds/led-core.o drivers/leds/led-class.o drivers/leds/leds-s2mpb02.o drivers/leds/leds-max77854-rgb.o 

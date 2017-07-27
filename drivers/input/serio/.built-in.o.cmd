@@ -1,0 +1,1 @@
+cmd_drivers/input/serio/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/input/serio/built-in.o drivers/input/serio/serio.o drivers/input/serio/libps2.o 

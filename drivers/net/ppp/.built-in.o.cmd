@@ -1,0 +1,1 @@
+cmd_drivers/net/ppp/built-in.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-ld --strip-debug -Ofast -EL    -r -o drivers/net/ppp/built-in.o drivers/net/ppp/ppp_generic.o drivers/net/ppp/bsd_comp.o drivers/net/ppp/ppp_deflate.o drivers/net/ppp/ppp_mppe.o drivers/net/ppp/pppox.o drivers/net/ppp/pppolac.o drivers/net/ppp/pppopns.o 
