@@ -707,7 +707,7 @@ deps_drivers/video/fbdev/exynos/decon_8890/panels/s6e3ha3_s6e3ha2_wqhd_lcd_ctrl.
   drivers/video/fbdev/exynos/decon_8890/panels/s6e3ha3_s6e3ha2_wqhd_param.h \
     $(wildcard include/config/exynos/decon/lcd/mcd.h) \
   drivers/video/fbdev/exynos/decon_8890/panels/aid_dimming.h \
-  drivers/video/fbdev/exynos/decon_8890/panels/s6e3hf4_wqhd_dimming.h \
+  drivers/video/fbdev/exynos/decon_8890/panels/s6e3ha3_wqhd_dimming.h \
   drivers/video/fbdev/exynos/decon_8890/panels/dsim_panel.h \
     $(wildcard include/config/wqhd.h) \
     $(wildcard include/config/fhd.h) \

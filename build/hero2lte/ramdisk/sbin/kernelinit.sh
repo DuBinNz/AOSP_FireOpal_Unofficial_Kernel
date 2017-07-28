@@ -1,7 +1,6 @@
 #!/system/bin/sh
 
 
-# Init by BABUSH
 # UNOFFICAL FireOpalKernel
 
 
@@ -17,8 +16,6 @@ fi;
 
 
 MTWEAKS_PATH=/data/.mtweaks
-SPECTRUM_PROF=/data/media/0/Spectrum/profiles/
-SPECTRUM_PATH=/data/media/0/Spectrum
 
 
 # Mount
@@ -118,9 +115,9 @@ echo 416000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq;
 echo 1586000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq;
 echo 130000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq;
 
-#-------------------------
+
 # MTWEAKS
-#-------------------------
+
 
 	# Make internal storage directory.
     if [ ! -d $MTWEAKS_PATH ]; then
@@ -144,28 +141,10 @@ echo 130000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq;
 	$BB cat /sys/devices/14ac0000.mali/volt_table > $MTWEAKS_PATH/bk/gpu_stock_voltage
 	$BB chmod -R 755 $MTWEAKS_PATH/bk/*;
 
-#-------------------------
-# SPECTRUM FILES
-#-------------------------
 
 
-	# Check if spectrum profile directory is exist
-    if [ ! -d $SPECTRUM_PATH ]; then
-	$BB mkdir $SPECTRUM_PATH
-	$BB cd $SPECTRUM_PATH
-	$BB mkdir /profiles/
-
-    fi;
-
-	$BB mv /spec/balance.profile $SPECTRUM_PROF
-	$BB mv /spec/battery.profile $SPECTRUM_PROF
-	$BB mv /spec/gaming.profile $SPECTRUM_PROF
-	$BB mv /spec/performance.profile $SPECTRUM_PROF
-
-
-#-------------------------
 # APPLY PERMISSIONS
-#-------------------------
+
 
 	# sqlite3
 	$BB chown 0.0 /system/xbin/sqlite3;
@@ -176,12 +155,6 @@ echo 130000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq;
 
 #-------------------------
 
-
-# Deepsleep fix
-su -c 'echo "temporary none" >> /sys/class/scsi_disk/0:0:0:0/cache_type'
-su -c 'echo "temporary none" >> /sys/class/scsi_disk/0:0:0:1/cache_type'
-su -c 'echo "temporary none" >> /sys/class/scsi_disk/0:0:0:2/cache_type'
-su -c 'echo "temporary none" >> /sys/class/scsi_disk/0:0:0:3/cache_type'
 
 
 # Unmount

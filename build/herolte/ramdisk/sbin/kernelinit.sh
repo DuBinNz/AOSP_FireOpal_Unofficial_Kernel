@@ -1,49 +1,36 @@
 #!/system/bin/sh
-#
-# Copyright (C) 2017 Michele Beccalossi <beccalossi.michele@gmail.com>
-#
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
 
-BB=/system/xbin/busybox;
 
-# mount root as rw to apply tweaks and settings
-if [ "$($BB mount | grep rootfs | cut -c 26-27 | grep -c ro)" -eq "1" ]; then
-	$BB mount -o remount,rw /;
+# Init by BABUSH
+# UNOFFICAL FireOpalKernel
+
+
+
+if [ -e /su/xbin/busybox ]; then
+	BB=/su/xbin/busybox;
+else if [ -e /sbin/busybox ]; then
+	BB=/sbin/busybox;
+else
+	BB=/system/xbin/busybox;
 fi;
-if [ "$($BB mount | grep system | grep -c ro)" -eq "1" ]; then
-	$BB mount -o remount,rw /system;
 fi;
+
+
+MTWEAKS_PATH=/data/.mtweaks
+
+
+# Mount
+$BB mount -t rootfs -o remount,rw rootfs;
+$BB mount -o remount,rw /system;
+$BB mount -o remount,rw /data;
+$BB mount -o remount,rw /;
+
 
 # cpu - little
-chmod "644" /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-echo "338000" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-chmod "444" /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-
-chmod "644" /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-echo "1586000" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-chmod "444" /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-
-echo "conservative" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
 # cpu - big
-chmod "644" /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-echo "312000" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-chmod "444" /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-
-chmod "644" /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-echo "2600000" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-chmod "444" /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-
-echo "conservative" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+echo "interactive" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 
 # zram
 swapoff "/dev/block/zram0/" > dev/null 2>&1
@@ -58,9 +45,12 @@ echo "4" > /sys/block/zram0/max_comp_streams
 echo "0" > /proc/sys/vm/page-cluster
 
 # miscellaneous
-echo "N" > /sys/module/sync/parameters/fsync_enabled
+# Enable FSYNC
+	echo "N" > /sys/module/sync/parameters/fsync_enabled
 
-echo "1" > /proc/sys/vm/laptop_mode
+# Set VM Preferences
+  echo "0" > /proc/sys/vm/laptop_mode
+	echo "1" > /proc/sys/vm/overcommit_memory
 
 # storage - internal
 echo "cfq" > /sys/block/sda/queue/scheduler
@@ -74,20 +64,103 @@ echo "128" > /sys/block/mmcblk0/queue/read_ahead_kb
 echo "0" > /sys/block/mmcblk0/queue/rq_affinity
 echo "0" > /sys/block/mmcblk0/queue/iostats
 
-# i/o scheduler
-echo "90" > /proc/sys/kernel/sched_downmigrate
-echo "95" > /proc/sys/kernel/sched_upmigrate
-echo "400000" > /proc/sys/kernel/sched_freq_inc_notify
-echo "400000" > /proc/sys/kernel/sched_freq_dec_notify
-echo "3" > /proc/sys/kernel/sched_spill_nr_run
-echo "100" > /proc/sys/kernel/sched_init_task_load
+
+# Set I/O Scheduler tweaks mmcblk0
+	chmod 644 /sys/block/mmcblk0/queue/scheduler
+	echo "maple" > /sys/block/mmcblk0/queue/scheduler
+	echo "512" > /sys/block/mmcblk0/queue/read_ahead_kb
+  chmod 644 /sys/block/mmcblk0/queue/iosched/writes_starved
+	echo "4" > /sys/block/mmcblk0/queue/iosched/writes_starved
+  chmod 644 /sys/block/mmcblk0/queue/iosched/fifo_batch
+	echo "16" > /sys/block/mmcblk0/queue/iosched/fifo_batch
+	echo "350" > /sys/block/mmcblk0/queue/iosched/sync_read_expire
+	echo "550" > /sys/block/mmcblk0/queue/iosched/sync_write_expire
+	echo "250" > /sys/block/mmcblk0/queue/iosched/async_read_expire
+	echo "450" > /sys/block/mmcblk0/queue/iosched/async_write_expire
+	echo "10" > /sys/block/mmcblk0/queue/iosched/sleep_latency_multiple
+
+# Set I/O Scheduler tweaks sda
+  chmod 644 /sys/block/sda/queue/scheduler
+	echo "maple" > /sys/block/sda/queue/scheduler
+	echo "256" > /sys/block/sda/queue/read_ahead_kb
+        echo "5" > /sys/block/sda/bdi/min_ratio
+        echo "2" > /sys/block/sda/queue/rq_affinity
+	echo "0" > /sys/block/sda/queue/add_random
+	echo "4" > /sys/block/sda/queue/iosched/writes_starved
+	echo "16" > /sys/block/sda/queue/iosched/fifo_batch
+	echo "350" > /sys/block/sda/queue/iosched/sync_read_expire
+	echo "550" > /sys/block/sda/queue/iosched/sync_write_expire
+	echo "250" > /sys/block/sda/queue/iosched/async_read_expire
+	echo "450" > /sys/block/sda/queue/iosched/async_write_expire
+	echo "10" > /sys/block/sda/queue/iosched/sleep_latency_multiple
+
+# Set I/O Scheduler tweaks sdb
+	chmod 644 /sys/block/sdb/queue/scheduler
+  echo maple > /sys/block/sdb/queue/scheduler
+
+# Set I/O Scheduler tweaks sdc
+	chmod 644 /sys/block/sdc/queue/scheduler
+	echo "maple" > /sys/block/sdc/queue/scheduler
+
+# Set I/O Scheduler tweaks sdd
+	chmod 644 /sys/block/sdd/queue/scheduler
+	echo "maple" > /sys/block/sdd/queue/scheduler
 
 # network
 sysctl -w net.ipv4.tcp_congestion_control=westwood
 
-if [ "$($BB mount | grep rootfs | cut -c 26-27 | grep -c ro)" -eq "1" ]; then
-	$BB mount -o remount,rw /;
-fi;
-if [ "$($BB mount | grep system | grep -c ro)" -eq "1" ]; then
-	$BB mount -o remount,rw /system;
-fi;
+
+# CPU freq. values
+echo 2288000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq;
+echo 416000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq;
+echo 1586000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq;
+echo 130000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq;
+
+#-------------------------
+# MTWEAKS
+#-------------------------
+
+	# Make internal storage directory.
+    if [ ! -d $MTWEAKS_PATH ]; then
+	    $BB mkdir $MTWEAKS_PATH;
+    fi;
+	
+	$BB chmod 0777 $MTWEAKS_PATH;
+	$BB chown 0.0 $MTWEAKS_PATH;
+
+	# Delete backup directory
+	$BB rm -rf $MTWEAKS_PATH/bk;
+
+    # Make backup directory.
+	$BB mkdir $MTWEAKS_PATH/bk;
+	$BB chmod 0777 $MTWEAKS_PATH/bk;
+	$BB chown 0.0 $MTWEAKS_PATH/bk;
+
+	# Save original voltages
+	$BB cat /sys/devices/system/cpu/cpufreq/mp-cpufreq/cluster1_volt_table > $MTWEAKS_PATH/bk/cpuCl1_stock_voltage
+	$BB cat /sys/devices/system/cpu/cpufreq/mp-cpufreq/cluster0_volt_table > $MTWEAKS_PATH/bk/cpuCl0_stock_voltage
+	$BB cat /sys/devices/14ac0000.mali/volt_table > $MTWEAKS_PATH/bk/gpu_stock_voltage
+	$BB chmod -R 755 $MTWEAKS_PATH/bk/*;
+
+
+#-------------------------
+# APPLY PERMISSIONS
+#-------------------------
+
+	# sqlite3
+	$BB chown 0.0 /system/xbin/sqlite3;
+	$BB chmod 755 /system/xbin/sqlite3;
+
+	# Fix SafetyNet by Repulsa
+	$BB chmod 640 /sys/fs/selinux/enforce
+
+#-------------------------
+
+
+
+# Unmount
+$BB mount -t rootfs -o remount,rw rootfs;
+$BB mount -o remount,ro /system;
+$BB mount -o remount,rw /data;
+$BB mount -o remount,ro /;
+

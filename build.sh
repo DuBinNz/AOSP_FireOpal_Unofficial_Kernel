@@ -14,8 +14,8 @@
 # GNU General Public License for more details.
 #
 
-KERNEL_NAME="Fire_Opal-AK"
-KERNEL_VERSION="3.1.0"
+KERNEL_NAME="Fire_Opal-UNOFFICIAL"
+KERNEL_VERSION="3.2.0"
 
 if [ $1 == 1 ] || [ $1 == 3 ] ; then
 	export MODEL=herolte
@@ -33,7 +33,7 @@ else
 	echo "1 - to build for herolte"
 	echo "2 - to build for hero2lte"
 	echo "3 - to clean the build environment and build for herolte"
-	echo "3 - to clean the build environment and build for hero2lte"
+	echo "4 - to clean the build environment and build for hero2lte"
 	echo ""
 	echo "========================================================="
 	echo "ERROR : UNKNOWN_INPUT"

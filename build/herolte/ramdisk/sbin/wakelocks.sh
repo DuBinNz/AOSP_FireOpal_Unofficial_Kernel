@@ -38,6 +38,27 @@ su -c "pm enable com.google.android.gsf/.update.SystemUpdateService"
 su -c "pm enable com.google.android.gsf/.update.SystemUpdateService$Receiver"
 su -c "pm enable com.google.android.gsf/.update.SystemUpdateService$SecretCodeReceiver"
 
+
+# WakeUp Parameter
+ 	chmod 644 /sys/module/wakeup/parameters/enable_sensorhub_wl
+ 	echo "N" > /sys/module/wakeup/parameters/enable_sensorhub_wl
+	chmod 644 /sys/module/wakeup/parameters/enable_ssp_wl
+	echo "N" > /sys/module/wakeup/parameters/enable_ssp_wl
+	chmod 644 /sys/module/wakeup/parameters/enable_bcmdhd4359_wl
+	echo "N" > /sys/module/wakeup/parameters/enable_bcmdhd4359_wl
+	chmod 644 /sys/module/wakeup/parameters/enable_wlan_wake_wl
+	echo "N" > /sys/module/wakeup/parameters/enable_wlan_wake_wl
+	chmod 644 /sys/module/wakeup/parameters/enable_bluedroid_timer_wl
+	echo "N" > /sys/module/wakeup/parameters/enable_bluedroid_timer_wl
+	chmod 644 /sys/module/wakeup/parameters/enable_mmc0_detect_wl
+	echo "N" > /sys/module/wakeup/parameters/enable_mmc0_detect_wl
+	chmod 644 /sys/module/wakeup/parameters/enable_wlan_ctrl_wake_wl
+	echo "N" > /sys/module/wakeup/parameters/enable_wlan_ctrl_wake_wl
+	chmod 644 /sys/module/wakeup/parameters/enable_wlan_rx_wake_wl
+	echo "N" > /sys/module/wakeup/parameters/enable_wlan_rx_wake_wl
+	chmod 644 /sys/module/wakeup/parameters/enable_wlan_wd_wake_wl
+	echo "N" > /sys/module/wakeup/parameters/enable_wlan_wd_wake_wl
+
 mount -o remount,ro -t auto /
 mount -t rootfs -o remount,ro rootfs
 mount -o remount,ro -t auto /system

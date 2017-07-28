@@ -829,6 +829,9 @@ deps_drivers/base/power/wakeup.o := \
   arch/arm64/include/uapi/asm/perf_regs.h \
   include/trace/define_trace.h \
   drivers/base/power/power.h \
+  include/linux/moduleparam.h \
+    $(wildcard include/config/alpha.h) \
+    $(wildcard include/config/ppc64.h) \
 
 drivers/base/power/wakeup.o: $(deps_drivers/base/power/wakeup.o)
 

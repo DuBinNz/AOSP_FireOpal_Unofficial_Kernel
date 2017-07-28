@@ -13,6 +13,7 @@
 # GNU General Public License for more details.
 #
 
+#Mount
 mount -o remount,rw /;
 mount -o rw,remount /system
 
@@ -97,3 +98,7 @@ supolicy --live "allow audioserver audioserver_tmpfs:file { read write execute }
 # mediakill
 killall -9 android.process.media
 killall -9 mediaserver
+
+#Unmount
+mount -o remount,ro /;
+mount -o ro,remount /system

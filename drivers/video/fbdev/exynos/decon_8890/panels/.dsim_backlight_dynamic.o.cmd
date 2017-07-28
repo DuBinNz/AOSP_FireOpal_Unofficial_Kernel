@@ -820,7 +820,7 @@ deps_drivers/video/fbdev/exynos/decon_8890/panels/dsim_backlight_dynamic.o := \
     $(wildcard include/config/panel/s6e3hf2/wqxga.h) \
   drivers/video/fbdev/exynos/decon_8890/panels/s6e3ha3_s6e3ha2_wqhd_param.h \
   drivers/video/fbdev/exynos/decon_8890/panels/aid_dimming.h \
-  drivers/video/fbdev/exynos/decon_8890/panels/s6e3hf4_wqhd_dimming.h \
+  drivers/video/fbdev/exynos/decon_8890/panels/s6e3ha3_wqhd_dimming.h \
 
 drivers/video/fbdev/exynos/decon_8890/panels/dsim_backlight_dynamic.o: $(deps_drivers/video/fbdev/exynos/decon_8890/panels/dsim_backlight_dynamic.o)
 

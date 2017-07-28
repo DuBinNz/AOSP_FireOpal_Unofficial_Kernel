@@ -10,20 +10,11 @@ on property:sys.boot_completed=1
     start kernelinit
     start sysinit
     start wakelocks
-    start sokokern
     start spec
     start busybox
 
 service kernelinit /sbin/kernelinit.sh
     class main
-    user root
-    group root
-    seclabel u:r:init:s0
-    oneshot
-    disabled
-
-service sokokern /sbin/sokokern.sh
-    class late_start
     user root
     group root
     seclabel u:r:init:s0

@@ -827,9 +827,9 @@ deps_drivers/video/fbdev/exynos/decon_8890/panels/dsim_panel.o := \
     $(wildcard include/config/panel/aid/dimming.h) \
   drivers/video/fbdev/exynos/decon_8890/panels/s6e3ha3_s6e3ha2_wqhd_param.h \
   drivers/video/fbdev/exynos/decon_8890/panels/aid_dimming.h \
-  drivers/video/fbdev/exynos/decon_8890/panels/s6e3hf4_wqhd_dimming.h \
+  drivers/video/fbdev/exynos/decon_8890/panels/s6e3ha3_wqhd_dimming.h \
   drivers/video/fbdev/exynos/decon_8890/panels/mdnie.h \
-  drivers/video/fbdev/exynos/decon_8890/panels/mdnie_lite_table_hero2.h \
+  drivers/video/fbdev/exynos/decon_8890/panels/mdnie_lite_table_hero1.h \
     $(wildcard include/config/tdmb.h) \
   include/linux/sec_debug.h \
     $(wildcard include/config/sec/debug.h) \
