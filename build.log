@@ -3,7 +3,7 @@
 START : FUNC_CLEAN_DTB
 =========================================================
 
-Delete files in: /home/muhammed/Desktop/AOSP_FireOpal_Pure_Kernel/arch/arm64/boot/dts/*.dtb
+Delete files in: /media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/*.dtb
 Delete dtb.img generated from previous build
 Delete Image generated from previous build
 
@@ -16,8 +16,8 @@ END   : FUNC_CLEAN_DTB
 START : FUNC_BUILD_KERNEL
 =========================================================
 
-Build common config:	kylothow-herolte-eur_defconfig
-Build model config:	herolte
+Build common config:	babush-hero2lte-eur_defconfig
+Build model config:	hero2lte
 
 #
 # configuration written to .config
@@ -25,304 +25,10 @@ Build model config:	herolte
 scripts/kconfig/conf --silentoldconfig Kconfig
   CHK     include/config/kernel.release
   CHK     include/generated/uapi/linux/version.h
-  DTC     arch/arm64/boot/dts/exynos8890-herolte_eur_open_08.dtb
-  UPD     include/config/kernel.release
   CHK     include/generated/utsrelease.h
-  UPD     include/generated/utsrelease.h
+  DTC     arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_08.dtb
   CALL    scripts/checksyscalls.sh
   CHK     include/generated/compile.h
-  CC      init/version.o
-  LD      init/built-in.o
-  CC      kernel/sys.o
-  CC      kernel/trace/trace.o
-  CC      drivers/base/firmware_class.o
-  LD      drivers/base/built-in.o
-  LD      kernel/trace/built-in.o
-  LD      kernel/built-in.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_pno.o
-  LD      net/ipv4/netfilter/built-in.o
-  LD      net/ipv4/built-in.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_common.o
-  LD      net/built-in.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_ip.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_custom_gpio.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_custom_sec.o
-  CC      drivers/sensorhub/brcm/sx9310.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_linux.o
-  LD      drivers/sensorhub/brcm/built-in.o
-  LD      drivers/sensorhub/built-in.o
-  CC      drivers/video/fbdev/exynos/decon_8890/panels/dsim_panel.o
-  CC      drivers/video/fbdev/exynos/decon_8890/panels/mdnie_lite.o
-  CC      drivers/video/fbdev/exynos/decon_8890/panels/mdnie_tuning.o
-  CC      drivers/video/fbdev/exynos/decon_8890/panels/lcd_sysfs.o
-  CC      drivers/video/fbdev/exynos/decon_8890/panels/s6e3ha3_s6e3ha2_wqhd_lcd_ctrl.o
-  CC      drivers/video/fbdev/exynos/decon_8890/panels/dimming_core.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_linux_sched.o
-  CC      drivers/video/fbdev/exynos/decon_8890/panels/dsim_backlight_dynamic.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_cfg80211.o
-  LD      drivers/video/fbdev/exynos/decon_8890/panels/built-in.o
-  CC      drivers/video/fbdev/exynos/decon_8890/vpp/vpp_drv.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_linux_wq.o
-drivers/video/fbdev/exynos/decon_8890/vpp/vpp_drv.c: In function 'vpp_subdev_ioctl':
-drivers/video/fbdev/exynos/decon_8890/vpp/vpp_drv.c:574:6: warning: 'ret' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  int ret;
-      ^
-  CC      drivers/video/fbdev/exynos/decon_8890/vpp/vpp_reg_8890.o
-  CC      drivers/net/wireless/bcmdhd4359/aiutils.o
-  LD      drivers/video/fbdev/exynos/decon_8890/vpp/vpp.o
-  LD      drivers/video/fbdev/exynos/decon_8890/vpp/built-in.o
-  CC      drivers/video/fbdev/exynos/decon_8890/dsim_drv.o
-  CC      drivers/net/wireless/bcmdhd4359/bcmevent.o
-  CC      drivers/net/wireless/bcmdhd4359/bcmutils.o
-  CC      drivers/video/fbdev/exynos/decon_8890/dsim_reg_8890.o
-drivers/net/wireless/bcmdhd4359/bcmutils.c: In function 'bcm_ether_atoe':
-drivers/net/wireless/bcmdhd4359/bcmutils.c:580:7: warning: 'ep' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   if (!*p++ || i == 6)
-       ^
-drivers/video/fbdev/exynos/decon_8890/dsim_reg_8890.c: In function 'dsim_reg_set_multi_slice':
-drivers/video/fbdev/exynos/decon_8890/dsim_reg_8890.c:571:6: warning: 'multi_slice' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  val = multi_slice ? ~0 : 0;
-      ^
-In file included from drivers/video/fbdev/exynos/decon_8890/dsim_reg_8890.c:20:0:
-drivers/video/fbdev/exynos/decon_8890/dsim_reg_8890.c: In function 'dsim_reg_set_hresol':
-drivers/video/fbdev/exynos/decon_8890/dsim.h:395:13: warning: 'width' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  val = (val & mask) | (old & ~mask);
-             ^
-drivers/video/fbdev/exynos/decon_8890/dsim_reg_8890.c:736:6: note: 'width' was declared here
-  u32 width, val;
-      ^
-  CC      drivers/net/wireless/bcmdhd4359/bcmwifi_channels.o
-  CC      drivers/video/fbdev/exynos/decon_8890/decon_core.o
-  CC      drivers/net/wireless/bcmdhd4359/hndpmu.o
-  CC      drivers/net/wireless/bcmdhd4359/linux_osl.o
-In file included from ./arch/arm64/include/asm/irqflags.h:22:0,
-                 from include/linux/irqflags.h:15,
-                 from include/linux/spinlock.h:53,
-                 from include/linux/seqlock.h:35,
-                 from include/linux/time.h:5,
-                 from include/uapi/linux/timex.h:56,
-                 from include/linux/timex.h:56,
-                 from include/linux/sched.h:19,
-                 from ./arch/arm64/include/asm/compat.h:25,
-                 from ./arch/arm64/include/asm/stat.h:23,
-                 from include/linux/stat.h:5,
-                 from include/linux/module.h:10,
-                 from drivers/video/fbdev/exynos/decon_8890/decon_core.c:13:
-drivers/video/fbdev/exynos/decon_8890/decon_core.c: In function 'decon_wait_until_size_match':
-include/linux/exynos-ss.h:99:3: warning: 'dsim_xres' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   __exynos_ss_printk(fmt, ##__VA_ARGS__);  \
-   ^
-drivers/video/fbdev/exynos/decon_8890/decon_core.c:2787:18: note: 'dsim_xres' was declared here
-  u32 decon_xres, dsim_xres;
-                  ^
-In file included from ./arch/arm64/include/asm/irqflags.h:22:0,
-                 from include/linux/irqflags.h:15,
-                 from include/linux/spinlock.h:53,
-                 from include/linux/seqlock.h:35,
-                 from include/linux/time.h:5,
-                 from include/uapi/linux/timex.h:56,
-                 from include/linux/timex.h:56,
-                 from include/linux/sched.h:19,
-                 from ./arch/arm64/include/asm/compat.h:25,
-                 from ./arch/arm64/include/asm/stat.h:23,
-                 from include/linux/stat.h:5,
-                 from include/linux/module.h:10,
-                 from drivers/video/fbdev/exynos/decon_8890/decon_core.c:13:
-include/linux/exynos-ss.h:99:3: warning: 'decon_xres' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   __exynos_ss_printk(fmt, ##__VA_ARGS__);  \
-   ^
-drivers/video/fbdev/exynos/decon_8890/decon_core.c:2787:6: note: 'decon_xres' was declared here
-  u32 decon_xres, dsim_xres;
-      ^
-In file included from ./arch/arm64/include/asm/irqflags.h:22:0,
-                 from include/linux/irqflags.h:15,
-                 from include/linux/spinlock.h:53,
-                 from include/linux/seqlock.h:35,
-                 from include/linux/time.h:5,
-                 from include/uapi/linux/timex.h:56,
-                 from include/linux/timex.h:56,
-                 from include/linux/sched.h:19,
-                 from ./arch/arm64/include/asm/compat.h:25,
-                 from ./arch/arm64/include/asm/stat.h:23,
-                 from include/linux/stat.h:5,
-                 from include/linux/module.h:10,
-                 from drivers/video/fbdev/exynos/decon_8890/decon_core.c:13:
-include/linux/exynos-ss.h:99:3: warning: 'dsim_yres' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   __exynos_ss_printk(fmt, ##__VA_ARGS__);  \
-   ^
-drivers/video/fbdev/exynos/decon_8890/decon_core.c:2786:18: note: 'dsim_yres' was declared here
-  u32 decon_yres, dsim_yres;
-                  ^
-In file included from ./arch/arm64/include/asm/irqflags.h:22:0,
-                 from include/linux/irqflags.h:15,
-                 from include/linux/spinlock.h:53,
-                 from include/linux/seqlock.h:35,
-                 from include/linux/time.h:5,
-                 from include/uapi/linux/timex.h:56,
-                 from include/linux/timex.h:56,
-                 from include/linux/sched.h:19,
-                 from ./arch/arm64/include/asm/compat.h:25,
-                 from ./arch/arm64/include/asm/stat.h:23,
-                 from include/linux/stat.h:5,
-                 from include/linux/module.h:10,
-                 from drivers/video/fbdev/exynos/decon_8890/decon_core.c:13:
-include/linux/exynos-ss.h:99:3: warning: 'decon_yres' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   __exynos_ss_printk(fmt, ##__VA_ARGS__);  \
-   ^
-drivers/video/fbdev/exynos/decon_8890/decon_core.c:2786:6: note: 'decon_yres' was declared here
-  u32 decon_yres, dsim_yres;
-      ^
-  CC      drivers/net/wireless/bcmdhd4359/sbutils.o
-  CC      drivers/net/wireless/bcmdhd4359/siutils.o
-  CC      drivers/video/fbdev/exynos/decon_8890/decon_f.o
-  CC      drivers/video/fbdev/exynos/decon_8890/decon_s.o
-  CC      drivers/video/fbdev/exynos/decon_8890/decon_t.o
-  CC      drivers/video/fbdev/exynos/decon_8890/decon_dsi.o
-drivers/video/fbdev/exynos/decon_8890/decon_dsi.c: In function 'decon_config_eint_for_te':
-drivers/video/fbdev/exynos/decon_8890/decon_dsi.c:553:9: warning: 'gpio' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  gpio = gpio_to_irq(gpio);
-         ^
-  CC      drivers/net/wireless/bcmdhd4359/wl_android.o
-  CC      drivers/video/fbdev/exynos/decon_8890/decon_helper.o
-  CC      drivers/video/fbdev/exynos/decon_8890/decon_bts.o
-  CC      drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.o
-In file included from drivers/video/fbdev/exynos/decon_8890/decon.h:28:0,
-                 from drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:19:
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c: In function 'decon_reg_get_frame_fifo_size':
-drivers/video/fbdev/exynos/decon_8890/regs-decon.h:286:44: warning: 'val' may be used uninitialized in this function [-Wmaybe-uninitialized]
- #define FRAME_FIFO_HEIGHT_GET(_v)   (((_v) >> 16) & 0x3fff)
-                                            ^
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:267:6: note: 'val' was declared here
-  u32 val;
-      ^
-In file included from drivers/video/fbdev/exynos/decon_8890/decon.h:28:0,
-                 from drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:19:
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c: In function 'decon_reg_get_dispif_size':
-drivers/video/fbdev/exynos/decon_8890/regs-decon.h:178:41: warning: 'val' may be used uninitialized in this function [-Wmaybe-uninitialized]
- #define DISPIF_HEIGHT_GET(_v)    (((_v) >> 16) & 0x3fff)
-                                         ^
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:410:6: note: 'val' was declared here
-  u32 val;
-      ^
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c: In function 'decon_reg_set_comp_size':
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:429:26: warning: 'mic_dummy_in_bytes' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  u32 mic_width_in_bytes, mic_dummy_in_bytes;
-                          ^
-In file included from include/linux/kernel.h:13:0,
-                 from include/linux/exynos-ss.h:18,
-                 from ./arch/arm64/include/asm/irqflags.h:22,
-                 from include/linux/irqflags.h:15,
-                 from ./arch/arm64/include/asm/atomic.h:25,
-                 from include/linux/atomic.h:4,
-                 from include/linux/kgdb.h:18,
-                 from include/linux/fb.h:4,
-                 from drivers/video/fbdev/exynos/decon_8890/decon.h:15,
-                 from drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:19:
-include/linux/printk.h:250:2: warning: 'ratio_type' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  printk(KERN_INFO pr_fmt(fmt), ##__VA_ARGS__)
-  ^
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:428:6: note: 'ratio_type' was declared here
-  u32 ratio_type; /* 0 : 12N, 1: 12N4, 2 : 12N8, 3 : ratio2 */
-      ^
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c: In function 'decon_reg_get_linecnt':
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:754:2: warning: 'val' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  return val;
-  ^
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c: In function 'decon_reg_wait_linecnt_is_zero_timeout':
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:767:6: warning: 'val' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   if (!linecnt)
-      ^
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c: In function 'dsc_reg_get_slice_height':
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:1128:2: warning: 'slice_height' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  return slice_height;
-  ^
-In file included from drivers/video/fbdev/exynos/decon_8890/decon.h:28:0,
-                 from drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:19:
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c: In function 'dsc_reg_init':
-drivers/video/fbdev/exynos/decon_8890/regs-decon.h:289:49: warning: 'val' may be used uninitialized in this function [-Wmaybe-uninitialized]
- #define FRAME_FIFO_WIDTH_GET(_v)   (((_v) >> 0) & 0x3fff)
-                                                 ^
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:267:6: note: 'val' was declared here
-  u32 val;
-      ^
-In file included from drivers/video/fbdev/exynos/decon_8890/decon.h:28:0,
-                 from drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:19:
-drivers/video/fbdev/exynos/decon_8890/regs-decon.h:289:49: warning: 'val' may be used uninitialized in this function [-Wmaybe-uninitialized]
- #define FRAME_FIFO_WIDTH_GET(_v)   (((_v) >> 0) & 0x3fff)
-                                                 ^
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:267:6: note: 'val' was declared here
-  u32 val;
-      ^
-In file included from drivers/video/fbdev/exynos/decon_8890/decon.h:28:0,
-                 from drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:19:
-drivers/video/fbdev/exynos/decon_8890/regs-decon.h:181:46: warning: 'val' may be used uninitialized in this function [-Wmaybe-uninitialized]
- #define DISPIF_WIDTH_GET(_v)    (((_v) >> 0) & 0x3fff)
-                                              ^
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:410:6: note: 'val' was declared here
-  u32 val;
-      ^
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c: In function 'decon_reg_stop':
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:767:6: warning: 'val' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   if (!linecnt)
-      ^
-drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:743:6: note: 'val' was declared here
-  u32 val;
-      ^
-  CC      drivers/net/wireless/bcmdhd4359/wl_cfg80211.o
-  LD      drivers/video/fbdev/exynos/decon_8890/dsim.o
-  LD      drivers/video/fbdev/exynos/decon_8890/decon.o
-  LD      drivers/video/fbdev/exynos/decon_8890/built-in.o
-  LD      drivers/video/fbdev/exynos/built-in.o
-  LD      drivers/video/fbdev/built-in.o
-  LD      drivers/video/built-in.o
-  CC      drivers/net/wireless/bcmdhd4359/wl_cfgp2p.o
-drivers/net/wireless/bcmdhd4359/wl_cfgp2p.c: In function 'wl_cfgp2p_set_p2p_noa':
-drivers/net/wireless/bcmdhd4359/wl_cfgp2p.c:1930:9: warning: 'type' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   ret = wldev_iovar_setbuf(wl_to_p2p_bss_ndev(cfg, type),
-         ^
-drivers/net/wireless/bcmdhd4359/wl_cfgp2p.c: In function 'wl_cfgp2p_set_p2p_ps':
-drivers/net/wireless/bcmdhd4359/wl_cfgp2p.c:2004:7: warning: 'conn_idx' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   dev = wl_to_p2p_bss_ndev(cfg, conn_idx);
-       ^
-drivers/net/wireless/bcmdhd4359/wl_cfgp2p.c: In function 'wl_cfgp2p_set_p2p_ecsa':
-drivers/net/wireless/bcmdhd4359/wl_cfgp2p.c:2057:7: warning: 'conn_idx' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   dev = wl_to_p2p_bss_ndev(cfg, conn_idx);
-       ^
-  CC      drivers/net/wireless/bcmdhd4359/wl_cfg_btcoex.o
-  CC      drivers/net/wireless/bcmdhd4359/wldev_common.o
-  CC      drivers/net/wireless/bcmdhd4359/wl_linux_mon.o
-  CC      drivers/net/wireless/bcmdhd4359/wl_roam.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_linux_platdev.o
-  CC      drivers/net/wireless/bcmdhd4359/hnd_pktq.o
-  CC      drivers/net/wireless/bcmdhd4359/hnd_pktpool.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_custom_cis.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_pcie.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_pcie_linux.o
-  CC      drivers/net/wireless/bcmdhd4359/pcie_core.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_flowring.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_msgbuf.o
-  CC      drivers/net/wireless/bcmdhd4359/wl_cfgvendor.o
-  CC      drivers/net/wireless/bcmdhd4359/dhd_rtt.o
-  CC      drivers/net/wireless/bcmdhd4359/bcmxtlv.o
-  CC      drivers/net/wireless/bcmdhd4359/bcm_app_utils.o
-  LD      drivers/net/wireless/bcmdhd4359/dhd.o
-  LD      drivers/net/wireless/bcmdhd4359/built-in.o
-  LD      drivers/net/wireless/built-in.o
-  LD      drivers/net/built-in.o
-  LD      drivers/built-in.o
-  LINK    vmlinux
-  LD      vmlinux.o
-  MODPOST vmlinux.o
-  GEN     .version
-  CHK     include/generated/compile.h
-  UPD     include/generated/compile.h
-  CC      init/version.o
-  LD      init/built-in.o
-  KSYM    .tmp_kallsyms1.o
-  KSYM    .tmp_kallsyms2.o
-  LD      vmlinux
-  SORTEX  vmlinux
-  SYSMAP  System.map
   OBJCOPY arch/arm64/boot/Image
   GZIP    arch/arm64/boot/Image.gz
 
@@ -337,37 +43,29 @@ START : FUNC_BUILD_DTIMAGE_TARGET
 
 Processing dts files...
 
-=> Processing: exynos8890-herolte_eur_open_00.dts
-=> Generating: exynos8890-herolte_eur_open_00.dtb
-=> Processing: exynos8890-herolte_eur_open_01.dts
-=> Generating: exynos8890-herolte_eur_open_01.dtb
-=> Processing: exynos8890-herolte_eur_open_02.dts
-=> Generating: exynos8890-herolte_eur_open_02.dtb
-=> Processing: exynos8890-herolte_eur_open_03.dts
-=> Generating: exynos8890-herolte_eur_open_03.dtb
-=> Processing: exynos8890-herolte_eur_open_04.dts
-=> Generating: exynos8890-herolte_eur_open_04.dtb
-=> Processing: exynos8890-herolte_eur_open_08.dts
-=> Generating: exynos8890-herolte_eur_open_08.dtb
-=> Processing: exynos8890-herolte_eur_open_09.dts
-=> Generating: exynos8890-herolte_eur_open_09.dtb
+=> Processing: exynos8890-hero2lte_eur_open_00.dts
+=> Generating: exynos8890-hero2lte_eur_open_00.dtb
+=> Processing: exynos8890-hero2lte_eur_open_01.dts
+=> Generating: exynos8890-hero2lte_eur_open_01.dtb
+=> Processing: exynos8890-hero2lte_eur_open_03.dts
+=> Generating: exynos8890-hero2lte_eur_open_03.dtb
+=> Processing: exynos8890-hero2lte_eur_open_04.dts
+=> Generating: exynos8890-hero2lte_eur_open_04.dtb
+=> Processing: exynos8890-hero2lte_eur_open_08.dts
+=> Generating: exynos8890-hero2lte_eur_open_08.dtb
 
 Generating dtb.img...
 
 => Found compatible entry: samsung,exynos8890
     (chip: 8890, hw_rev: 0, hw_rev_end: 0)
 => Found compatible entry: samsung,exynos8890
-    (chip: 8890, hw_rev: 1, hw_rev_end: 1)
-=> Found compatible entry: samsung,exynos8890
-    (chip: 8890, hw_rev: 2, hw_rev_end: 2)
+    (chip: 8890, hw_rev: 1, hw_rev_end: 2)
 => Found compatible entry: samsung,exynos8890
     (chip: 8890, hw_rev: 3, hw_rev_end: 3)
 => Found compatible entry: samsung,exynos8890
     (chip: 8890, hw_rev: 4, hw_rev_end: 7)
 => Found compatible entry: samsung,exynos8890
-    (chip: 8890, hw_rev: 8, hw_rev_end: 8)
-=> Found compatible entry: samsung,exynos8890
-    (chip: 8890, hw_rev: 9, hw_rev_end: 9)
+    (chip: 8890, hw_rev: 8, hw_rev_end: 10)
 
 =========================================================
 END   : FUNC_BUILD_DTIMAGE_TARGET
@@ -378,9 +76,9 @@ END   : FUNC_BUILD_DTIMAGE_TARGET
 START : FUNC_BUILD_ZIP
 =========================================================
 
-Output: Fire_Opal-UNOFFICIAL-v3.2.0-herolte.zip
+Output: Fire_Opal-UNOFFICIAL-v3.2.0-hero2lte.zip
 
-  adding: anykernel.sh (deflated 63%)
+  adding: anykernel.sh (deflated 62%)
   adding: dtb (deflated 78%)
   adding: META-INF/ (stored 0%)
   adding: META-INF/com/ (stored 0%)
@@ -389,35 +87,35 @@ Output: Fire_Opal-UNOFFICIAL-v3.2.0-herolte.zip
   adding: META-INF/com/google/android/updater-script (stored 0%)
   adding: META-INF/com/google/android/update-binary (deflated 66%)
   adding: ramdisk/ (stored 0%)
-  adding: ramdisk/init.services.rc (deflated 63%)
+  adding: ramdisk/fstab.samsungexynos8890 (deflated 78%)
+  adding: ramdisk/init.spectrum.sh (deflated 28%)
   adding: ramdisk/res/ (stored 0%)
   adding: ramdisk/res/spec/ (stored 0%)
-  adding: ramdisk/res/spec/balance.profile (deflated 85%)
   adding: ramdisk/res/spec/gaming.profile (deflated 85%)
-  adding: ramdisk/res/spec/battery.profile (deflated 81%)
   adding: ramdisk/res/spec/performance.profile (deflated 85%)
+  adding: ramdisk/res/spec/battery.profile (deflated 81%)
+  adding: ramdisk/res/spec/balance.profile (deflated 85%)
   adding: ramdisk/init.spectrum.rc (deflated 67%)
-  adding: ramdisk/init.spectrum.sh (deflated 28%)
-  adding: ramdisk/fstab.samsungexynos8890 (deflated 77%)
+  adding: ramdisk/init.services.rc (deflated 63%)
   adding: ramdisk/sbin/ (stored 0%)
-  adding: ramdisk/sbin/kernelinit.sh (deflated 74%)
-  adding: ramdisk/sbin/resetprop (deflated 60%)
-  adding: ramdisk/sbin/spec.sh (deflated 67%)
-  adding: ramdisk/sbin/busybox (deflated 27%)
   adding: ramdisk/sbin/busybox.sh (deflated 52%)
-  adding: ramdisk/sbin/sysinit.sh (deflated 60%)
+  adding: ramdisk/sbin/spec.sh (deflated 67%)
   adding: ramdisk/sbin/wakelocks.sh (deflated 75%)
+  adding: ramdisk/sbin/busybox (deflated 27%)
+  adding: ramdisk/sbin/resetprop (deflated 60%)
+  adding: ramdisk/sbin/sysinit.sh (deflated 60%)
+  adding: ramdisk/sbin/kernelinit.sh (deflated 74%)
   adding: tools/ (stored 0%)
-  adding: tools/mkbootfs (deflated 48%)
-  adding: tools/mkbootimg (deflated 35%)
   adding: tools/unpackbootimg (deflated 34%)
+  adding: tools/mkbootfs (deflated 48%)
   adding: tools/ak2-core.sh (deflated 74%)
   adding: tools/busybox (deflated 38%)
-  adding: zImage (deflated 70%)
+  adding: tools/mkbootimg (deflated 35%)
+  adding: zImage (deflated 69%)
 
 =========================================================
 END   : FUNC_BUILD_ZIP
 =========================================================
 
-Total compile time was 65 seconds.
+Total compile time was 26 seconds.
 

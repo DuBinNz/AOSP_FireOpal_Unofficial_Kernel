@@ -1,34 +1,39 @@
-	.cpu cortex-a57+fp+simd+crypto+crc
+	.arch armv8-a+crc
 	.file	"bounds.c"
-// GNU C (UBERTC-4.9.x) version 4.9.4 (aarch64-linux-android)
-//	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.99, MPFR version 3.1.4, MPC version 1.0.3
+// GNU C89 (UBERTC-6.x.x) version 6.3.1 20170528 (aarch64-linux-android)
+//	compiled by GNU C version 7.0.1 20170407 (experimental) [trunk revision 246759], GMP version 6.1.99, MPFR version 3.1.5, MPC version 1.0.3, isl version 0.15
 // GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 // options passed:  -nostdinc -I ./arch/arm64/include
 // -I arch/arm64/include/generated -I include -I ./arch/arm64/include/uapi
 // -I arch/arm64/include/generated/uapi -I ./include/uapi
 // -I include/generated/uapi
-// -iprefix /home/muhammed/Desktop/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/4.9.4/
+// -iprefix /media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/6.3.1/
 // -D __KERNEL__ -D NDEBUG -D KBUILD_STR(s)=#s
 // -D KBUILD_BASENAME=KBUILD_STR(bounds)
 // -D KBUILD_MODNAME=KBUILD_STR(bounds)
-// -isystem /home/muhammed/Desktop/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/4.9.4/include
+// -isystem /media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/6.3.1/include
 // -include ./include/linux/kconfig.h -MD kernel/.bounds.s.d
-// kernel/bounds.c -mbionic -mlittle-endian -mcpu=cortex-a57.cortex-a53
-// -mtune=cortex-a57.cortex-a53 -mgeneral-regs-only -mabi=lp64
+// kernel/bounds.c -mbionic -mlittle-endian -mlow-precision-recip-sqrt
+// -mcpu=cortex-a57.cortex-a53 -mtune=cortex-a57.cortex-a53
+// -mgeneral-regs-only -mpc-relative-literal-loads -mabi=lp64
 // -auxbase-strip kernel/bounds.s -g0 -g -Ofast -Ofast -Wall -Wundef
 // -Wstrict-prototypes -Wno-trigraphs -Werror=implicit-function-declaration
-// -Wno-format-security -Wframe-larger-than=2048
-// -Wno-unused-but-set-variable -Wdeclaration-after-statement
-// -Wno-pointer-sign -Werror=implicit-int -Werror=strict-prototypes
-// -Werror=date-time -std=gnu90 -fno-strict-aliasing -fno-common -fgraphite
-// -fgraphite-identity -fivopts -floop-block -floop-strip-mine
+// -Wno-format-security -Wno-frame-address -Wframe-larger-than=2048
+// -Wno-unused-but-set-variable -Wunused-const-variable=0
+// -Wdeclaration-after-statement -Wno-pointer-sign -Werror=implicit-int
+// -Werror=strict-prototypes -Werror=date-time -std=gnu90
+// -fno-strict-aliasing -fno-common -fgraphite -fgraphite-identity -fivopts
 // -fmodulo-sched -fmodulo-sched-allow-regmoves -ftree-loop-distribution
-// -floop-interchange -fno-delete-null-pointer-checks -fno-PIE
+// -floop-nest-optimize -fno-delete-null-pointer-checks -fno-PIE
 // -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls
 // -fno-var-tracking-assignments -fno-strict-overflow -fconserve-stack
 // -fverbose-asm --param allow-store-data-races=0
-// options enabled:  -faggressive-loop-optimizations -fassociative-math
-// -fauto-inc-dec -fbranch-count-reg -fcaller-saves
+// options enabled:  -faggressive-loop-optimizations -falign-labels
+// -fassociative-math -fauto-inc-dec -fbranch-count-reg -fcaller-saves
+// -fchkp-check-incomplete-type -fchkp-check-read -fchkp-check-write
+// -fchkp-instrument-calls -fchkp-narrow-bounds -fchkp-optimize
+// -fchkp-store-bounds -fchkp-use-static-bounds
+// -fchkp-use-static-const-bounds -fchkp-use-wrappers
 // -fcombine-stack-adjustments -fcompare-elim -fcprop-registers
 // -fcrossjumping -fcse-follow-jumps -fcx-limited-range -fdefer-pop
 // -fdevirtualize -fdevirtualize-speculatively -fdwarf2-cfi-asm
@@ -39,41 +44,46 @@
 // -fhoist-adjacent-loads -fident -fif-conversion -fif-conversion2
 // -findirect-inlining -finline -finline-atomics -finline-functions
 // -finline-functions-called-once -finline-small-functions -fipa-cp
-// -fipa-cp-clone -fipa-profile -fipa-pure-const -fipa-reference -fipa-sra
-// -fira-hoist-pressure -fira-share-save-slots -fira-share-spill-slots
-// -fisolate-erroneous-paths-dereference -fivopts -fkeep-static-consts
-// -fleading-underscore -flifetime-dse -floop-block -floop-interchange
-// -floop-strip-mine -fmerge-constants -fmerge-debug-strings -fmodulo-sched
+// -fipa-cp-alignment -fipa-cp-clone -fipa-icf -fipa-icf-functions
+// -fipa-icf-variables -fipa-profile -fipa-pure-const -fipa-ra
+// -fipa-reference -fipa-sra -fira-hoist-pressure -fira-share-save-slots
+// -fira-share-spill-slots -fisolate-erroneous-paths-dereference -fivopts
+// -fkeep-static-consts -fleading-underscore -flifetime-dse
+// -floop-nest-optimize -flra-remat -flto-odr-type-merging
+// -fmerge-constants -fmerge-debug-strings -fmodulo-sched
 // -fmodulo-sched-allow-regmoves -fmove-loop-invariants
 // -fomit-frame-pointer -foptimize-strlen -fpartial-inlining -fpeephole
-// -fpeephole2 -fpredictive-commoning -fprefetch-loop-arrays
+// -fpeephole2 -fplt -fpredictive-commoning -fprefetch-loop-arrays
 // -freciprocal-math -free -freg-struct-return -freorder-blocks
 // -freorder-functions -frerun-cse-after-loop
 // -fsched-critical-path-heuristic -fsched-dep-count-heuristic
 // -fsched-group-heuristic -fsched-interblock -fsched-last-insn-heuristic
-// -fsched-rank-heuristic -fsched-spec -fsched-spec-insn-heuristic
-// -fsched-stalled-insns-dep -fschedule-insns -fschedule-insns2
-// -fsection-anchors -fshow-column -fshrink-wrap -fsplit-ivs-in-unroller
-// -fsplit-wide-types -fstrict-volatile-bitfields -fsync-libcalls
+// -fsched-pressure -fsched-rank-heuristic -fsched-spec
+// -fsched-spec-insn-heuristic -fsched-stalled-insns-dep -fschedule-fusion
+// -fschedule-insns -fschedule-insns2 -fsection-anchors
+// -fsemantic-interposition -fshow-column -fshrink-wrap
+// -fsplit-ivs-in-unroller -fsplit-paths -fsplit-wide-types -fssa-backprop
+// -fssa-phiopt -fstdarg-opt -fstrict-volatile-bitfields -fsync-libcalls
 // -fthread-jumps -ftoplevel-reorder -ftree-bit-ccp -ftree-builtin-call-dce
-// -ftree-ccp -ftree-ch -ftree-coalesce-vars -ftree-copy-prop
-// -ftree-copyrename -ftree-cselim -ftree-dce -ftree-dominator-opts
-// -ftree-dse -ftree-forwprop -ftree-fre -ftree-loop-distribute-patterns
-// -ftree-loop-distribution -ftree-loop-if-convert -ftree-loop-im
-// -ftree-loop-ivcanon -ftree-loop-optimize -ftree-loop-vectorize
-// -ftree-parallelize-loops= -ftree-partial-pre -ftree-phiprop -ftree-pre
-// -ftree-pta -ftree-reassoc -ftree-scev-cprop -ftree-sink
-// -ftree-slp-vectorize -ftree-slsr -ftree-sra -ftree-switch-conversion
-// -ftree-tail-merge -ftree-ter -ftree-vrp -funit-at-a-time
-// -funsafe-math-optimizations -funswitch-loops -fvar-tracking
-// -fverbose-asm -fzero-initialized-in-bss -mandroid -mbionic
-// -mfix-cortex-a53-835769 -mgeneral-regs-only -mlittle-endian -mlra
-// -momit-leaf-frame-pointer
+// -ftree-ccp -ftree-ch -ftree-coalesce-vars -ftree-copy-prop -ftree-cselim
+// -ftree-dce -ftree-dominator-opts -ftree-dse -ftree-forwprop -ftree-fre
+// -ftree-loop-distribute-patterns -ftree-loop-distribution
+// -ftree-loop-if-convert -ftree-loop-im -ftree-loop-ivcanon
+// -ftree-loop-optimize -ftree-loop-vectorize -ftree-parallelize-loops=
+// -ftree-partial-pre -ftree-phiprop -ftree-pre -ftree-pta -ftree-reassoc
+// -ftree-scev-cprop -ftree-sink -ftree-slp-vectorize -ftree-slsr
+// -ftree-sra -ftree-switch-conversion -ftree-tail-merge -ftree-ter
+// -ftree-vrp -funit-at-a-time -funsafe-math-optimizations -funswitch-loops
+// -fvar-tracking -fverbose-asm -fzero-initialized-in-bss -mandroid
+// -mbionic -mfix-cortex-a53-835769 -mfix-cortex-a53-843419
+// -mgeneral-regs-only -mlittle-endian -momit-leaf-frame-pointer
+// -mpc-relative-literal-loads
 
 	.text
 .Ltext0:
 	.cfi_sections	.debug_frame
 	.align	2
+	.p2align 4,,15
 	.global	foo
 	.type	foo, %function
 foo:
@@ -102,29 +112,31 @@ foo:
 	
 ->SPINLOCK_SIZE 4 sizeof(spinlock_t)	//
 // 0 "" 2
-	.loc 1 25 0
 #NO_APP
 	ret
 	.cfi_endproc
 .LFE129:
 	.size	foo, .-foo
 .Letext0:
-	.file 2 "include/linux/page-flags.h"
-	.file 3 "include/linux/mmzone.h"
+	.file 2 "include/linux/types.h"
+	.file 3 "include/linux/init.h"
 	.file 4 "./arch/arm64/include/asm/cachetype.h"
 	.file 5 "include/linux/printk.h"
 	.file 6 "include/linux/kernel.h"
-	.section	.debug_info,"",%progbits
+	.file 7 "include/linux/page-flags.h"
+	.file 8 "include/linux/mmzone.h"
+	.file 9 "include/linux/lockdep.h"
+	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x1cd
+	.4byte	0x3ab
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x8
 	.uleb128 0x1
-	.4byte	.LASF50
+	.4byte	.LASF88
 	.byte	0x1
-	.4byte	.LASF51
-	.4byte	.LASF52
+	.4byte	.LASF89
+	.4byte	.LASF90
 	.8byte	.Ltext0
 	.8byte	.Letext0-.Ltext0
 	.4byte	.Ldebug_line0
@@ -172,122 +184,373 @@ foo:
 	.byte	0x1
 	.byte	0x8
 	.4byte	.LASF9
+	.uleb128 0x4
+	.4byte	0x73
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x5
 	.4byte	.LASF10
+	.uleb128 0x5
+	.byte	0x8
+	.4byte	0x73
+	.uleb128 0x6
+	.4byte	.LASF12
+	.byte	0x2
+	.byte	0x1d
+	.4byte	0x97
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x2
 	.4byte	.LASF11
-	.uleb128 0x4
-	.4byte	.LASF40
-	.byte	0x4
-	.byte	0x2
-	.byte	0x4a
-	.4byte	0x13d
-	.uleb128 0x5
-	.4byte	.LASF12
-	.sleb128 0
-	.uleb128 0x5
-	.4byte	.LASF13
-	.sleb128 1
-	.uleb128 0x5
-	.4byte	.LASF14
-	.sleb128 2
-	.uleb128 0x5
-	.4byte	.LASF15
-	.sleb128 3
-	.uleb128 0x5
-	.4byte	.LASF16
-	.sleb128 4
-	.uleb128 0x5
-	.4byte	.LASF17
-	.sleb128 5
-	.uleb128 0x5
-	.4byte	.LASF18
-	.sleb128 6
-	.uleb128 0x5
-	.4byte	.LASF19
-	.sleb128 7
-	.uleb128 0x5
-	.4byte	.LASF20
-	.sleb128 8
-	.uleb128 0x5
-	.4byte	.LASF21
-	.sleb128 9
-	.uleb128 0x5
-	.4byte	.LASF22
-	.sleb128 10
-	.uleb128 0x5
-	.4byte	.LASF23
-	.sleb128 11
-	.uleb128 0x5
-	.4byte	.LASF24
-	.sleb128 12
-	.uleb128 0x5
-	.4byte	.LASF25
-	.sleb128 13
-	.uleb128 0x5
-	.4byte	.LASF26
-	.sleb128 14
-	.uleb128 0x5
-	.4byte	.LASF27
-	.sleb128 15
-	.uleb128 0x5
-	.4byte	.LASF28
-	.sleb128 16
-	.uleb128 0x5
-	.4byte	.LASF29
-	.sleb128 17
-	.uleb128 0x5
-	.4byte	.LASF30
-	.sleb128 18
-	.uleb128 0x5
-	.4byte	.LASF31
-	.sleb128 19
-	.uleb128 0x5
-	.4byte	.LASF32
-	.sleb128 20
-	.uleb128 0x5
-	.4byte	.LASF33
-	.sleb128 21
-	.uleb128 0x5
-	.4byte	.LASF34
-	.sleb128 22
-	.uleb128 0x5
-	.4byte	.LASF35
-	.sleb128 8
-	.uleb128 0x5
-	.4byte	.LASF36
-	.sleb128 12
-	.uleb128 0x5
-	.4byte	.LASF37
-	.sleb128 8
-	.uleb128 0x5
-	.4byte	.LASF38
-	.sleb128 4
-	.uleb128 0x5
-	.4byte	.LASF39
-	.sleb128 11
-	.byte	0
 	.uleb128 0x6
-	.4byte	.LASF41
-	.byte	0x4
+	.4byte	.LASF13
 	.byte	0x3
-	.2byte	0x112
-	.4byte	0x15d
+	.byte	0x93
+	.4byte	0xa9
 	.uleb128 0x5
-	.4byte	.LASF42
-	.sleb128 0
-	.uleb128 0x5
-	.4byte	.LASF43
-	.sleb128 1
-	.uleb128 0x5
-	.4byte	.LASF44
-	.sleb128 2
-	.byte	0
+	.byte	0x8
+	.4byte	0xaf
 	.uleb128 0x7
+	.4byte	0x49
+	.uleb128 0x5
+	.byte	0x8
+	.4byte	0xba
+	.uleb128 0x8
+	.uleb128 0x9
+	.4byte	0x9e
+	.4byte	0xc6
+	.uleb128 0xa
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LASF14
+	.byte	0x3
+	.byte	0x96
+	.4byte	0xbb
+	.uleb128 0xb
+	.4byte	.LASF15
+	.byte	0x3
+	.byte	0x96
+	.4byte	0xbb
+	.uleb128 0xb
+	.4byte	.LASF16
+	.byte	0x3
+	.byte	0x97
+	.4byte	0xbb
+	.uleb128 0xb
+	.4byte	.LASF17
+	.byte	0x3
+	.byte	0x97
+	.4byte	0xbb
+	.uleb128 0x9
+	.4byte	0x73
+	.4byte	0xfd
+	.uleb128 0xa
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LASF18
+	.byte	0x3
+	.byte	0x9e
+	.4byte	0xf2
+	.uleb128 0xb
+	.4byte	.LASF19
+	.byte	0x3
+	.byte	0x9f
+	.4byte	0x86
+	.uleb128 0xb
+	.4byte	.LASF20
+	.byte	0x3
+	.byte	0xa0
+	.4byte	0x50
+	.uleb128 0xb
+	.4byte	.LASF21
+	.byte	0x3
+	.byte	0xa8
+	.4byte	0xb4
+	.uleb128 0xb
+	.4byte	.LASF22
+	.byte	0x3
+	.byte	0xaa
+	.4byte	0x8c
+	.uleb128 0xb
+	.4byte	.LASF23
+	.byte	0x4
+	.byte	0x28
+	.4byte	0x65
+	.uleb128 0x9
+	.4byte	0x7a
+	.4byte	0x14a
+	.uleb128 0xa
+	.byte	0
+	.uleb128 0x4
+	.4byte	0x13f
+	.uleb128 0xb
+	.4byte	.LASF24
+	.byte	0x5
+	.byte	0xa
+	.4byte	0x14a
+	.uleb128 0xb
+	.4byte	.LASF25
+	.byte	0x5
+	.byte	0xb
+	.4byte	0x14a
+	.uleb128 0x9
+	.4byte	0x49
+	.4byte	0x170
+	.uleb128 0xa
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LASF26
+	.byte	0x5
+	.byte	0x32
+	.4byte	0x165
+	.uleb128 0xb
+	.4byte	.LASF27
+	.byte	0x5
+	.byte	0xa2
+	.4byte	0x49
+	.uleb128 0xb
+	.4byte	.LASF28
+	.byte	0x5
+	.byte	0xa3
+	.4byte	0x49
+	.uleb128 0xb
+	.4byte	.LASF29
+	.byte	0x5
+	.byte	0xa4
+	.4byte	0x49
+	.uleb128 0xc
+	.4byte	.LASF31
+	.uleb128 0x4
+	.4byte	0x19c
+	.uleb128 0xd
+	.4byte	.LASF30
+	.byte	0x5
+	.2byte	0x1af
+	.4byte	0x1a1
+	.uleb128 0xc
+	.4byte	.LASF32
+	.uleb128 0xb
+	.4byte	.LASF33
+	.byte	0x6
+	.byte	0xeb
+	.4byte	0x1b2
+	.uleb128 0xe
+	.4byte	0x7f
+	.4byte	0x1d1
+	.uleb128 0xf
+	.4byte	0x49
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LASF34
+	.byte	0x6
+	.byte	0xec
+	.4byte	0x1dc
+	.uleb128 0x5
+	.byte	0x8
+	.4byte	0x1c2
+	.uleb128 0xd
+	.4byte	.LASF35
+	.byte	0x6
+	.2byte	0x1a8
+	.4byte	0x49
+	.uleb128 0xd
+	.4byte	.LASF36
+	.byte	0x6
+	.2byte	0x1a9
+	.4byte	0x49
+	.uleb128 0xd
+	.4byte	.LASF37
+	.byte	0x6
+	.2byte	0x1aa
+	.4byte	0x49
+	.uleb128 0xd
+	.4byte	.LASF38
+	.byte	0x6
+	.2byte	0x1ab
+	.4byte	0x49
+	.uleb128 0xd
+	.4byte	.LASF39
+	.byte	0x6
+	.2byte	0x1ac
+	.4byte	0x49
+	.uleb128 0xd
+	.4byte	.LASF40
+	.byte	0x6
+	.2byte	0x1ad
+	.4byte	0x49
+	.uleb128 0xd
+	.4byte	.LASF41
+	.byte	0x6
+	.2byte	0x1bf
+	.4byte	0x49
+	.uleb128 0xd
+	.4byte	.LASF42
+	.byte	0x6
+	.2byte	0x1c1
+	.4byte	0x8c
+	.uleb128 0x10
+	.4byte	.LASF52
+	.byte	0x4
+	.4byte	0x50
+	.byte	0x6
+	.2byte	0x1c4
+	.4byte	0x272
+	.uleb128 0x11
+	.4byte	.LASF43
+	.byte	0
+	.uleb128 0x11
+	.4byte	.LASF44
+	.byte	0x1
+	.uleb128 0x11
+	.4byte	.LASF45
+	.byte	0x2
+	.uleb128 0x11
+	.4byte	.LASF46
+	.byte	0x3
+	.uleb128 0x11
+	.4byte	.LASF47
+	.byte	0x4
+	.byte	0
+	.uleb128 0xd
+	.4byte	.LASF48
+	.byte	0x6
+	.2byte	0x1ca
+	.4byte	0x242
+	.uleb128 0xd
+	.4byte	.LASF49
+	.byte	0x6
+	.2byte	0x1dc
+	.4byte	0x14a
+	.uleb128 0xd
+	.4byte	.LASF50
+	.byte	0x6
+	.2byte	0x1e7
+	.4byte	0x14a
+	.uleb128 0xd
+	.4byte	.LASF51
+	.byte	0x6
+	.2byte	0x337
+	.4byte	0x86
+	.uleb128 0x12
+	.4byte	.LASF53
+	.byte	0x4
+	.4byte	0x50
+	.byte	0x7
+	.byte	0x4a
+	.4byte	0x35b
+	.uleb128 0x11
+	.4byte	.LASF54
+	.byte	0
+	.uleb128 0x11
+	.4byte	.LASF55
+	.byte	0x1
+	.uleb128 0x11
+	.4byte	.LASF56
+	.byte	0x2
+	.uleb128 0x11
+	.4byte	.LASF57
+	.byte	0x3
+	.uleb128 0x11
+	.4byte	.LASF58
+	.byte	0x4
+	.uleb128 0x11
+	.4byte	.LASF59
+	.byte	0x5
+	.uleb128 0x11
+	.4byte	.LASF60
+	.byte	0x6
+	.uleb128 0x11
+	.4byte	.LASF61
+	.byte	0x7
+	.uleb128 0x11
+	.4byte	.LASF62
+	.byte	0x8
+	.uleb128 0x11
+	.4byte	.LASF63
+	.byte	0x9
+	.uleb128 0x11
+	.4byte	.LASF64
+	.byte	0xa
+	.uleb128 0x11
+	.4byte	.LASF65
+	.byte	0xb
+	.uleb128 0x11
+	.4byte	.LASF66
+	.byte	0xc
+	.uleb128 0x11
+	.4byte	.LASF67
+	.byte	0xd
+	.uleb128 0x11
+	.4byte	.LASF68
+	.byte	0xe
+	.uleb128 0x11
+	.4byte	.LASF69
+	.byte	0xf
+	.uleb128 0x11
+	.4byte	.LASF70
+	.byte	0x10
+	.uleb128 0x11
+	.4byte	.LASF71
+	.byte	0x11
+	.uleb128 0x11
+	.4byte	.LASF72
+	.byte	0x12
+	.uleb128 0x11
+	.4byte	.LASF73
+	.byte	0x13
+	.uleb128 0x11
+	.4byte	.LASF74
+	.byte	0x14
+	.uleb128 0x11
+	.4byte	.LASF75
+	.byte	0x15
+	.uleb128 0x11
+	.4byte	.LASF76
+	.byte	0x16
+	.uleb128 0x11
+	.4byte	.LASF77
+	.byte	0x8
+	.uleb128 0x11
+	.4byte	.LASF78
+	.byte	0xc
+	.uleb128 0x11
+	.4byte	.LASF79
+	.byte	0x8
+	.uleb128 0x11
+	.4byte	.LASF80
+	.byte	0x4
+	.uleb128 0x11
+	.4byte	.LASF81
+	.byte	0xb
+	.byte	0
+	.uleb128 0x10
+	.4byte	.LASF82
+	.byte	0x4
+	.4byte	0x50
+	.byte	0x8
+	.2byte	0x112
+	.4byte	0x37f
+	.uleb128 0x11
+	.4byte	.LASF83
+	.byte	0
+	.uleb128 0x11
+	.4byte	.LASF84
+	.byte	0x1
+	.uleb128 0x11
+	.4byte	.LASF85
+	.byte	0x2
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LASF86
+	.byte	0x9
+	.byte	0x10
+	.4byte	0x49
+	.uleb128 0xb
+	.4byte	.LASF87
+	.byte	0x9
+	.byte	0x11
+	.4byte	0x49
+	.uleb128 0x13
 	.string	"foo"
 	.byte	0x1
 	.byte	0xf
@@ -295,47 +558,8 @@ foo:
 	.8byte	.LFE129-.LFB129
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0x8
-	.4byte	.LASF45
-	.byte	0x4
-	.byte	0x28
-	.4byte	0x65
-	.uleb128 0x9
-	.4byte	0x49
-	.4byte	0x18c
-	.uleb128 0xa
 	.byte	0
-	.uleb128 0x8
-	.4byte	.LASF46
-	.byte	0x5
-	.byte	0x32
-	.4byte	0x181
-	.uleb128 0xb
-	.4byte	.LASF47
-	.byte	0x6
-	.2byte	0x1a9
-	.4byte	0x49
-	.uleb128 0x9
-	.4byte	0x73
-	.4byte	0x1ae
-	.uleb128 0xa
-	.byte	0
-	.uleb128 0xb
-	.4byte	.LASF48
-	.byte	0x6
-	.2byte	0x1dc
-	.4byte	0x1ba
-	.uleb128 0xc
-	.4byte	0x1a3
-	.uleb128 0xb
-	.4byte	.LASF49
-	.byte	0x6
-	.2byte	0x1e7
-	.4byte	0x1cb
-	.uleb128 0xc
-	.4byte	0x1a3
-	.byte	0
-	.section	.debug_abbrev,"",%progbits
+	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
 	.uleb128 0x1
 	.uleb128 0x11
@@ -379,69 +603,23 @@ foo:
 	.byte	0
 	.byte	0
 	.uleb128 0x4
-	.uleb128 0x4
-	.byte	0x1
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x1
+	.uleb128 0x26
+	.byte	0
+	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x5
-	.uleb128 0x28
+	.uleb128 0xf
 	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x1c
-	.uleb128 0xd
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.uleb128 0x4
-	.byte	0x1
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x7
-	.uleb128 0x2e
-	.byte	0
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0x19
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x7
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2117
-	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x8
-	.uleb128 0x34
+	.uleb128 0x16
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
@@ -451,9 +629,21 @@ foo:
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x3f
+	.byte	0
+	.byte	0
+	.uleb128 0x7
+	.uleb128 0x15
+	.byte	0
+	.uleb128 0x27
 	.uleb128 0x19
-	.uleb128 0x3c
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x8
+	.uleb128 0x15
+	.byte	0
+	.uleb128 0x27
 	.uleb128 0x19
 	.byte	0
 	.byte	0
@@ -479,7 +669,7 @@ foo:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x3f
@@ -489,14 +679,117 @@ foo:
 	.byte	0
 	.byte	0
 	.uleb128 0xc
-	.uleb128 0x26
+	.uleb128 0x13
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3c
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0xd
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3c
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0xe
+	.uleb128 0x15
+	.byte	0x1
+	.uleb128 0x27
+	.uleb128 0x19
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xf
+	.uleb128 0x5
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+	.uleb128 0x10
+	.uleb128 0x4
+	.byte	0x1
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x1
+	.uleb128 0x13
 	.byte	0
-	.section	.debug_aranges,"",%progbits
+	.byte	0
+	.uleb128 0x11
+	.uleb128 0x28
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x12
+	.uleb128 0x4
+	.byte	0x1
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x13
+	.uleb128 0x2e
+	.byte	0
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0x19
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.byte	0
+	.section	.debug_aranges,"",@progbits
 	.4byte	0x2c
 	.2byte	0x2
 	.4byte	.Ldebug_info0
@@ -508,120 +801,196 @@ foo:
 	.8byte	.Letext0-.Ltext0
 	.8byte	0
 	.8byte	0
-	.section	.debug_line,"",%progbits
+	.section	.debug_line,"",@progbits
 .Ldebug_line0:
-	.section	.debug_str,"MS",%progbits,1
-.LASF26:
-	.string	"PG_head"
-.LASF46:
-	.string	"console_printk"
-.LASF22:
-	.string	"PG_reserved"
-.LASF42:
-	.string	"ZONE_NORMAL"
-.LASF29:
-	.string	"PG_mappedtodisk"
-.LASF12:
-	.string	"PG_locked"
-.LASF16:
-	.string	"PG_dirty"
-.LASF25:
-	.string	"PG_writeback"
-.LASF45:
-	.string	"__icache_flags"
-.LASF23:
-	.string	"PG_private"
-.LASF34:
-	.string	"__NR_PAGEFLAGS"
-.LASF44:
-	.string	"__MAX_NR_ZONES"
-.LASF36:
-	.string	"PG_fscache"
-.LASF52:
-	.string	"/home/muhammed/Desktop/AOSP_FireOpal_Pure_Kernel"
-.LASF14:
-	.string	"PG_referenced"
-.LASF28:
-	.string	"PG_swapcache"
-.LASF41:
-	.string	"zone_type"
-.LASF7:
-	.string	"long unsigned int"
-.LASF3:
-	.string	"short unsigned int"
-.LASF31:
-	.string	"PG_swapbacked"
-.LASF35:
+	.section	.debug_str,"MS",@progbits,1
+.LASF77:
 	.string	"PG_checked"
-.LASF1:
-	.string	"unsigned char"
-.LASF51:
-	.string	"kernel/bounds.c"
-.LASF27:
-	.string	"PG_tail"
-.LASF40:
-	.string	"pageflags"
-.LASF4:
-	.string	"unsigned int"
-.LASF13:
-	.string	"PG_error"
+.LASF82:
+	.string	"zone_type"
+.LASF30:
+	.string	"kmsg_fops"
+.LASF50:
+	.string	"hex_asc_upper"
+.LASF24:
+	.string	"linux_banner"
+.LASF38:
+	.string	"panic_on_unrecovered_nmi"
 .LASF6:
 	.string	"long long unsigned int"
-.LASF37:
-	.string	"PG_pinned"
-.LASF19:
-	.string	"PG_slab"
-.LASF20:
-	.string	"PG_owner_priv_1"
-.LASF49:
-	.string	"hex_asc_upper"
-.LASF18:
-	.string	"PG_active"
-.LASF8:
-	.string	"sizetype"
-.LASF24:
-	.string	"PG_private_2"
+.LASF47:
+	.string	"SYSTEM_RESTART"
+.LASF34:
+	.string	"panic_blink"
+.LASF45:
+	.string	"SYSTEM_HALT"
+.LASF76:
+	.string	"__NR_PAGEFLAGS"
 .LASF5:
 	.string	"long long int"
-.LASF17:
-	.string	"PG_lru"
-.LASF9:
-	.string	"char"
-.LASF32:
-	.string	"PG_unevictable"
-.LASF38:
-	.string	"PG_savepinned"
-.LASF50:
-	.ascii	"GNU C 4.9.4 -mbionic -mlittle-endian -mcpu=cortex-a57.cortex"
-	.ascii	"-a53 -mtune=cortex-a57.cortex-a53 -mgeneral-regs-only -mabi="
-	.ascii	"lp64 -g0 -g -Ofast -Ofast -std=gnu90 -fno-strict-aliasing -f"
-	.ascii	"no-common -fgraphite -fgraphite-identity -fivopts -floop-blo"
-	.ascii	"ck -floop-strip-mine -fmodulo-sched -fmodulo-sched-allow-reg"
-	.ascii	"moves -f"
-	.string	"tree-loop-distribution -floop-interchange -fno-delete-null-pointer-checks -fno-PIE -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -fno-strict-overflow -fconserve-stack --param allow-store-data-races=0"
-.LASF2:
-	.string	"short int"
-.LASF48:
-	.string	"hex_asc"
-.LASF21:
-	.string	"PG_arch_1"
-.LASF10:
-	.string	"long int"
-.LASF43:
-	.string	"ZONE_MOVABLE"
-.LASF15:
-	.string	"PG_uptodate"
 .LASF0:
 	.string	"signed char"
-.LASF30:
+.LASF17:
+	.string	"__security_initcall_end"
+.LASF19:
+	.string	"saved_command_line"
+.LASF66:
+	.string	"PG_private_2"
+.LASF43:
+	.string	"SYSTEM_BOOTING"
+.LASF53:
+	.string	"pageflags"
+.LASF89:
+	.string	"kernel/bounds.c"
+.LASF10:
+	.string	"long int"
+.LASF63:
+	.string	"PG_arch_1"
+.LASF69:
+	.string	"PG_tail"
+.LASF25:
+	.string	"linux_proc_banner"
+.LASF54:
+	.string	"PG_locked"
+.LASF59:
+	.string	"PG_lru"
+.LASF56:
+	.string	"PG_referenced"
+.LASF13:
+	.string	"initcall_t"
+.LASF31:
+	.string	"file_operations"
+.LASF4:
+	.string	"unsigned int"
+.LASF65:
+	.string	"PG_private"
+.LASF41:
+	.string	"root_mountflags"
+.LASF7:
+	.string	"long unsigned int"
+.LASF29:
+	.string	"kptr_restrict"
+.LASF32:
+	.string	"atomic_notifier_head"
+.LASF26:
+	.string	"console_printk"
+.LASF44:
+	.string	"SYSTEM_RUNNING"
+.LASF3:
+	.string	"short unsigned int"
+.LASF12:
+	.string	"bool"
+.LASF80:
+	.string	"PG_savepinned"
+.LASF88:
+	.ascii	"GNU C89 6.3.1 20170528 -mbionic -mlittle-endian -mlow-precis"
+	.ascii	"ion-recip-sqrt -mcpu=cortex-a57.cortex-a53 -mtune=cortex-a57"
+	.ascii	".cortex-a53 -mgeneral-regs-only -mpc-relative-literal-loads "
+	.ascii	"-mabi=lp64 -g0 -g -Ofast -Ofast -std=gnu90 -fno-strict-alias"
+	.ascii	"ing -fno-common -fgraphite -fgraphite-identity -fivopts -fmo"
+	.ascii	"dulo-sched -fmodulo-sched-allow-regmoves -ftr"
+	.string	"ee-loop-distribution -floop-nest-optimize -fno-delete-null-pointer-checks -fno-PIE -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -fno-strict-overflow -fconserve-stack --param allow-store-data-races=0"
+.LASF15:
+	.string	"__con_initcall_end"
+.LASF86:
+	.string	"prove_locking"
+.LASF72:
 	.string	"PG_reclaim"
-.LASF47:
+.LASF55:
+	.string	"PG_error"
+.LASF8:
+	.string	"sizetype"
+.LASF79:
+	.string	"PG_pinned"
+.LASF40:
+	.string	"sysctl_panic_on_stackoverflow"
+.LASF20:
+	.string	"reset_devices"
+.LASF48:
+	.string	"system_state"
+.LASF67:
+	.string	"PG_writeback"
+.LASF87:
+	.string	"lock_stat"
+.LASF75:
+	.string	"PG_mlocked"
+.LASF36:
 	.string	"panic_timeout"
+.LASF84:
+	.string	"ZONE_MOVABLE"
+.LASF16:
+	.string	"__security_initcall_start"
+.LASF33:
+	.string	"panic_notifier_list"
+.LASF71:
+	.string	"PG_mappedtodisk"
+.LASF83:
+	.string	"ZONE_NORMAL"
+.LASF57:
+	.string	"PG_uptodate"
+.LASF28:
+	.string	"dmesg_restrict"
 .LASF11:
 	.string	"_Bool"
-.LASF33:
-	.string	"PG_mlocked"
-.LASF39:
+.LASF1:
+	.string	"unsigned char"
+.LASF52:
+	.string	"system_states"
+.LASF70:
+	.string	"PG_swapcache"
+.LASF22:
+	.string	"initcall_debug"
+.LASF2:
+	.string	"short int"
+.LASF61:
+	.string	"PG_slab"
+.LASF85:
+	.string	"__MAX_NR_ZONES"
+.LASF58:
+	.string	"PG_dirty"
+.LASF46:
+	.string	"SYSTEM_POWER_OFF"
+.LASF35:
+	.string	"oops_in_progress"
+.LASF9:
+	.string	"char"
+.LASF68:
+	.string	"PG_head"
+.LASF81:
 	.string	"PG_slob_free"
-	.ident	"GCC: (UBERTC-4.9.x) 4.9.4"
-	.section	.note.GNU-stack,"",%progbits
+.LASF37:
+	.string	"panic_on_oops"
+.LASF18:
+	.string	"boot_command_line"
+.LASF62:
+	.string	"PG_owner_priv_1"
+.LASF27:
+	.string	"printk_delay_msec"
+.LASF42:
+	.string	"early_boot_irqs_disabled"
+.LASF39:
+	.string	"panic_on_io_nmi"
+.LASF64:
+	.string	"PG_reserved"
+.LASF51:
+	.string	"mach_panic_string"
+.LASF60:
+	.string	"PG_active"
+.LASF23:
+	.string	"__icache_flags"
+.LASF49:
+	.string	"hex_asc"
+.LASF78:
+	.string	"PG_fscache"
+.LASF14:
+	.string	"__con_initcall_start"
+.LASF21:
+	.string	"late_time_init"
+.LASF73:
+	.string	"PG_swapbacked"
+.LASF74:
+	.string	"PG_unevictable"
+.LASF90:
+	.string	"/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel"
+	.ident	"GCC: (UBERTC-6.x.x) 6.3.1 20170528"
+	.section	.note.GNU-stack,"",@progbits

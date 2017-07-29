@@ -1,37 +1,42 @@
-	.cpu cortex-a57+fp+simd+crypto+crc
+	.arch armv8-a+crc
 	.file	"devicetable-offsets.c"
-// GNU C (UBERTC-4.9.x) version 4.9.4 (aarch64-linux-android)
-//	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.99, MPFR version 3.1.4, MPC version 1.0.3
+// GNU C89 (UBERTC-6.x.x) version 6.3.1 20170528 (aarch64-linux-android)
+//	compiled by GNU C version 7.0.1 20170407 (experimental) [trunk revision 246759], GMP version 6.1.99, MPFR version 3.1.5, MPC version 1.0.3, isl version 0.15
 // GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 // options passed:  -nostdinc -I ./arch/arm64/include
 // -I arch/arm64/include/generated -I include -I ./arch/arm64/include/uapi
 // -I arch/arm64/include/generated/uapi -I ./include/uapi
 // -I include/generated/uapi
-// -iprefix /home/muhammed/Desktop/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/4.9.4/
+// -iprefix /media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/6.3.1/
 // -D __KERNEL__ -D NDEBUG -D KBUILD_STR(s)=#s
 // -D KBUILD_BASENAME=KBUILD_STR(devicetable_offsets)
 // -D KBUILD_MODNAME=KBUILD_STR(devicetable_offsets)
-// -isystem /home/muhammed/Desktop/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/4.9.4/include
+// -isystem /media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/6.3.1/include
 // -include ./include/linux/kconfig.h
 // -MD scripts/mod/.devicetable-offsets.s.d
 // scripts/mod/devicetable-offsets.c -mbionic -mlittle-endian
-// -mcpu=cortex-a57.cortex-a53 -mtune=cortex-a57.cortex-a53
-// -mgeneral-regs-only -mabi=lp64
+// -mlow-precision-recip-sqrt -mcpu=cortex-a57.cortex-a53
+// -mtune=cortex-a57.cortex-a53 -mgeneral-regs-only
+// -mpc-relative-literal-loads -mabi=lp64
 // -auxbase-strip scripts/mod/devicetable-offsets.s -g0 -g -Ofast -Ofast
 // -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs
 // -Werror=implicit-function-declaration -Wno-format-security
-// -Wframe-larger-than=2048 -Wno-unused-but-set-variable
-// -Wdeclaration-after-statement -Wno-pointer-sign -Werror=implicit-int
-// -Werror=strict-prototypes -Werror=date-time -std=gnu90
-// -fno-strict-aliasing -fno-common -fgraphite -fgraphite-identity -fivopts
-// -floop-block -floop-strip-mine -fmodulo-sched
+// -Wno-frame-address -Wframe-larger-than=2048 -Wno-unused-but-set-variable
+// -Wunused-const-variable=0 -Wdeclaration-after-statement
+// -Wno-pointer-sign -Werror=implicit-int -Werror=strict-prototypes
+// -Werror=date-time -std=gnu90 -fno-strict-aliasing -fno-common -fgraphite
+// -fgraphite-identity -fivopts -fmodulo-sched
 // -fmodulo-sched-allow-regmoves -ftree-loop-distribution
-// -floop-interchange -fno-delete-null-pointer-checks -fno-PIE
+// -floop-nest-optimize -fno-delete-null-pointer-checks -fno-PIE
 // -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls
 // -fno-var-tracking-assignments -fno-strict-overflow -fconserve-stack
 // -fverbose-asm --param allow-store-data-races=0
-// options enabled:  -faggressive-loop-optimizations -fassociative-math
-// -fauto-inc-dec -fbranch-count-reg -fcaller-saves
+// options enabled:  -faggressive-loop-optimizations -falign-labels
+// -fassociative-math -fauto-inc-dec -fbranch-count-reg -fcaller-saves
+// -fchkp-check-incomplete-type -fchkp-check-read -fchkp-check-write
+// -fchkp-instrument-calls -fchkp-narrow-bounds -fchkp-optimize
+// -fchkp-store-bounds -fchkp-use-static-bounds
+// -fchkp-use-static-const-bounds -fchkp-use-wrappers
 // -fcombine-stack-adjustments -fcompare-elim -fcprop-registers
 // -fcrossjumping -fcse-follow-jumps -fcx-limited-range -fdefer-pop
 // -fdevirtualize -fdevirtualize-speculatively -fdwarf2-cfi-asm
@@ -42,42 +47,47 @@
 // -fhoist-adjacent-loads -fident -fif-conversion -fif-conversion2
 // -findirect-inlining -finline -finline-atomics -finline-functions
 // -finline-functions-called-once -finline-small-functions -fipa-cp
-// -fipa-cp-clone -fipa-profile -fipa-pure-const -fipa-reference -fipa-sra
-// -fira-hoist-pressure -fira-share-save-slots -fira-share-spill-slots
-// -fisolate-erroneous-paths-dereference -fivopts -fkeep-static-consts
-// -fleading-underscore -flifetime-dse -floop-block -floop-interchange
-// -floop-strip-mine -fmerge-constants -fmerge-debug-strings -fmodulo-sched
+// -fipa-cp-alignment -fipa-cp-clone -fipa-icf -fipa-icf-functions
+// -fipa-icf-variables -fipa-profile -fipa-pure-const -fipa-ra
+// -fipa-reference -fipa-sra -fira-hoist-pressure -fira-share-save-slots
+// -fira-share-spill-slots -fisolate-erroneous-paths-dereference -fivopts
+// -fkeep-static-consts -fleading-underscore -flifetime-dse
+// -floop-nest-optimize -flra-remat -flto-odr-type-merging
+// -fmerge-constants -fmerge-debug-strings -fmodulo-sched
 // -fmodulo-sched-allow-regmoves -fmove-loop-invariants
 // -fomit-frame-pointer -foptimize-strlen -fpartial-inlining -fpeephole
-// -fpeephole2 -fpredictive-commoning -fprefetch-loop-arrays
+// -fpeephole2 -fplt -fpredictive-commoning -fprefetch-loop-arrays
 // -freciprocal-math -free -freg-struct-return -freorder-blocks
 // -freorder-functions -frerun-cse-after-loop
 // -fsched-critical-path-heuristic -fsched-dep-count-heuristic
 // -fsched-group-heuristic -fsched-interblock -fsched-last-insn-heuristic
-// -fsched-rank-heuristic -fsched-spec -fsched-spec-insn-heuristic
-// -fsched-stalled-insns-dep -fschedule-insns -fschedule-insns2
-// -fsection-anchors -fshow-column -fshrink-wrap -fsplit-ivs-in-unroller
-// -fsplit-wide-types -fstrict-volatile-bitfields -fsync-libcalls
+// -fsched-pressure -fsched-rank-heuristic -fsched-spec
+// -fsched-spec-insn-heuristic -fsched-stalled-insns-dep -fschedule-fusion
+// -fschedule-insns -fschedule-insns2 -fsection-anchors
+// -fsemantic-interposition -fshow-column -fshrink-wrap
+// -fsplit-ivs-in-unroller -fsplit-paths -fsplit-wide-types -fssa-backprop
+// -fssa-phiopt -fstdarg-opt -fstrict-volatile-bitfields -fsync-libcalls
 // -fthread-jumps -ftoplevel-reorder -ftree-bit-ccp -ftree-builtin-call-dce
-// -ftree-ccp -ftree-ch -ftree-coalesce-vars -ftree-copy-prop
-// -ftree-copyrename -ftree-cselim -ftree-dce -ftree-dominator-opts
-// -ftree-dse -ftree-forwprop -ftree-fre -ftree-loop-distribute-patterns
-// -ftree-loop-distribution -ftree-loop-if-convert -ftree-loop-im
-// -ftree-loop-ivcanon -ftree-loop-optimize -ftree-loop-vectorize
-// -ftree-parallelize-loops= -ftree-partial-pre -ftree-phiprop -ftree-pre
-// -ftree-pta -ftree-reassoc -ftree-scev-cprop -ftree-sink
-// -ftree-slp-vectorize -ftree-slsr -ftree-sra -ftree-switch-conversion
-// -ftree-tail-merge -ftree-ter -ftree-vrp -funit-at-a-time
-// -funsafe-math-optimizations -funswitch-loops -fvar-tracking
-// -fverbose-asm -fzero-initialized-in-bss -mandroid -mbionic
-// -mfix-cortex-a53-835769 -mgeneral-regs-only -mlittle-endian -mlra
-// -momit-leaf-frame-pointer
+// -ftree-ccp -ftree-ch -ftree-coalesce-vars -ftree-copy-prop -ftree-cselim
+// -ftree-dce -ftree-dominator-opts -ftree-dse -ftree-forwprop -ftree-fre
+// -ftree-loop-distribute-patterns -ftree-loop-distribution
+// -ftree-loop-if-convert -ftree-loop-im -ftree-loop-ivcanon
+// -ftree-loop-optimize -ftree-loop-vectorize -ftree-parallelize-loops=
+// -ftree-partial-pre -ftree-phiprop -ftree-pre -ftree-pta -ftree-reassoc
+// -ftree-scev-cprop -ftree-sink -ftree-slp-vectorize -ftree-slsr
+// -ftree-sra -ftree-switch-conversion -ftree-tail-merge -ftree-ter
+// -ftree-vrp -funit-at-a-time -funsafe-math-optimizations -funswitch-loops
+// -fvar-tracking -fverbose-asm -fzero-initialized-in-bss -mandroid
+// -mbionic -mfix-cortex-a53-835769 -mfix-cortex-a53-843419
+// -mgeneral-regs-only -mlittle-endian -momit-leaf-frame-pointer
+// -mpc-relative-literal-loads
 
 	.text
 .Ltext0:
 	.cfi_sections	.debug_frame
-	.section	.text.startup,"ax",%progbits
+	.section	.text.startup,"ax",@progbits
 	.align	2
+	.p2align 4,,15
 	.global	main
 	.type	main, %function
 main:
@@ -815,7 +825,7 @@ main:
 	.size	main, .-main
 	.text
 .Letext0:
-	.section	.debug_info,"",%progbits
+	.section	.debug_info,"",@progbits
 .Ldebug_info0:
 	.4byte	0x9e
 	.2byte	0x4
@@ -891,7 +901,7 @@ main:
 	.uleb128 0x1
 	.byte	0x9c
 	.byte	0
-	.section	.debug_abbrev,"",%progbits
+	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
 	.uleb128 0x1
 	.uleb128 0x11
@@ -960,7 +970,7 @@ main:
 	.byte	0
 	.byte	0
 	.byte	0
-	.section	.debug_aranges,"",%progbits
+	.section	.debug_aranges,"",@progbits
 	.4byte	0x2c
 	.2byte	0x2
 	.4byte	.Ldebug_info0
@@ -972,41 +982,41 @@ main:
 	.8byte	.LFE8-.LFB8
 	.8byte	0
 	.8byte	0
-	.section	.debug_ranges,"",%progbits
+	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
 	.8byte	.LFB8
 	.8byte	.LFE8
 	.8byte	0
 	.8byte	0
-	.section	.debug_line,"",%progbits
+	.section	.debug_line,"",@progbits
 .Ldebug_line0:
-	.section	.debug_str,"MS",%progbits,1
+	.section	.debug_str,"MS",@progbits,1
 .LASF5:
 	.string	"long long int"
 .LASF4:
 	.string	"unsigned int"
-.LASF1:
-	.string	"unsigned char"
 .LASF15:
 	.string	"main"
+.LASF14:
+	.string	"/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel"
 .LASF7:
 	.string	"long unsigned int"
 .LASF6:
 	.string	"long long unsigned int"
-.LASF14:
-	.string	"/home/muhammed/Desktop/AOSP_FireOpal_Pure_Kernel"
-.LASF12:
-	.ascii	"GNU C 4.9.4 -mbionic -mlittle-endian -mcpu=cortex-a57.cortex"
-	.ascii	"-a53 -mtune=cortex-a57.cortex-a53 -mgeneral-regs-only -mabi="
-	.ascii	"lp64 -g0 -g -Ofast -Ofast -std=gnu90 -fno-strict-aliasing -f"
-	.ascii	"no-common -fgraphite -fgraphite-identity -fivopts -floop-blo"
-	.ascii	"ck -floop-strip-mine -fmodulo-sched -fmodulo-sched-allow-reg"
-	.ascii	"moves -f"
-	.string	"tree-loop-distribution -floop-interchange -fno-delete-null-pointer-checks -fno-PIE -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -fno-strict-overflow -fconserve-stack --param allow-store-data-races=0"
+.LASF1:
+	.string	"unsigned char"
 .LASF9:
 	.string	"char"
 .LASF10:
 	.string	"long int"
+.LASF12:
+	.ascii	"GNU C89 6.3.1 20170528 -mbionic -mlittle-endian -mlow-precis"
+	.ascii	"ion-recip-sqrt -mcpu=cortex-a57.cortex-a53 -mtune=cortex-a57"
+	.ascii	".cortex-a53 -mgeneral-regs-only -mpc-relative-literal-loads "
+	.ascii	"-mabi=lp64 -g0 -g -Ofast -Ofast -std=gnu90 -fno-strict-alias"
+	.ascii	"ing -fno-common -fgraphite -fgraphite-identity -fivopts -fmo"
+	.ascii	"dulo-sched -fmodulo-sched-allow-regmoves -ftr"
+	.string	"ee-loop-distribution -floop-nest-optimize -fno-delete-null-pointer-checks -fno-PIE -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -fno-strict-overflow -fconserve-stack --param allow-store-data-races=0"
 .LASF11:
 	.string	"_Bool"
 .LASF3:
@@ -1019,5 +1029,5 @@ main:
 	.string	"short int"
 .LASF8:
 	.string	"sizetype"
-	.ident	"GCC: (UBERTC-4.9.x) 4.9.4"
-	.section	.note.GNU-stack,"",%progbits
+	.ident	"GCC: (UBERTC-6.x.x) 6.3.1 20170528"
+	.section	.note.GNU-stack,"",@progbits

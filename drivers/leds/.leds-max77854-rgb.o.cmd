@@ -1,4 +1,4 @@
-cmd_drivers/leds/leds-max77854-rgb.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-gcc -Wp,-MD,drivers/leds/.leds-max77854-rgb.o.d  -nostdinc -isystem /home/muhammed/Desktop/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/4.9.4/include -I./arch/arm64/include -Iarch/arm64/include/generated  -Iinclude -I./arch/arm64/include/uapi -Iarch/arm64/include/generated/uapi -I./include/uapi -Iinclude/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -Ofast -g0 -DNDEBUG -fgraphite -fgraphite-identity -fivopts -floop-block -floop-interchange -floop-strip-mine -fmodulo-sched -fmodulo-sched-allow-regmoves -fomit-frame-pointer -ftree-loop-distribution -ftree-loop-linear -mcpu=cortex-a57.cortex-a53 -mtune=cortex-a57.cortex-a53 -mgeneral-regs-only -fno-pic -fno-delete-null-pointer-checks -fno-PIE -Ofast --param=allow-store-data-races=0 -Wframe-larger-than=2048 -fno-stack-protector -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(leds_max77854_rgb)"  -D"KBUILD_MODNAME=KBUILD_STR(leds_max77854_rgb)" -c -o drivers/leds/leds-max77854-rgb.o drivers/leds/leds-max77854-rgb.c
+cmd_drivers/leds/leds-max77854-rgb.o :=  ../aarch64-uber-linux-android-6.3.1-20170616/bin/aarch64-linux-android-gcc -Wp,-MD,drivers/leds/.leds-max77854-rgb.o.d  -nostdinc -isystem /media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/6.3.1/include -I./arch/arm64/include -Iarch/arm64/include/generated  -Iinclude -I./arch/arm64/include/uapi -Iarch/arm64/include/generated/uapi -I./include/uapi -Iinclude/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -Ofast -g0 -DNDEBUG -fgraphite -fgraphite-identity -fivopts -floop-block -floop-interchange -floop-strip-mine -fmodulo-sched -fmodulo-sched-allow-regmoves -fomit-frame-pointer -ftree-loop-distribution -ftree-loop-linear -mlow-precision-recip-sqrt -mpc-relative-literal-loads -mcpu=cortex-a57.cortex-a53 -mtune=cortex-a57.cortex-a53 -mgeneral-regs-only -mpc-relative-literal-loads -fno-pic -fno-delete-null-pointer-checks -Wno-frame-address -fno-PIE -Ofast --param=allow-store-data-races=0 -Wframe-larger-than=2048 -fno-stack-protector -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(leds_max77854_rgb)"  -D"KBUILD_MODNAME=KBUILD_STR(leds_max77854_rgb)" -c -o drivers/leds/leds-max77854-rgb.o drivers/leds/leds-max77854-rgb.c
 
 source_drivers/leds/leds-max77854-rgb.o := drivers/leds/leds-max77854-rgb.c
 
@@ -16,7 +16,7 @@ deps_drivers/leds/leds-max77854-rgb.o := \
     $(wildcard include/config/ring/buffer.h) \
     $(wildcard include/config/tracing.h) \
     $(wildcard include/config/ftrace/mcount/record.h) \
-  /home/muhammed/Desktop/aarch64-uber-linux-android-6.3.1-20170616/lib/gcc/aarch64-linux-android/4.9.4/include/stdarg.h \
+  /media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/aarch64-uber-linux-android-6.3.1-20170616/lib/gcc/aarch64-linux-android/6.3.1/include/stdarg.h \
   include/linux/linkage.h \
   include/linux/compiler.h \
     $(wildcard include/config/sparse/rcu/pointer.h) \
@@ -793,6 +793,73 @@ deps_drivers/leds/leds-max77854-rgb.o := \
   arch/arm64/include/asm/compiler.h \
   include/linux/sec_sysfs.h \
     $(wildcard include/config/sec/sysfs.h) \
+  include/linux/syscalls.h \
+    $(wildcard include/config/ftrace/syscalls.h) \
+    $(wildcard include/config/old/sigsuspend.h) \
+    $(wildcard include/config/old/sigsuspend3.h) \
+    $(wildcard include/config/odd/rt/sigaction.h) \
+    $(wildcard include/config/clone/backwards.h) \
+    $(wildcard include/config/clone/backwards3.h) \
+  include/uapi/linux/aio_abi.h \
+  include/trace/syscall.h \
+    $(wildcard include/config/have/syscall/tracepoints.h) \
+  include/linux/tracepoint.h \
+  include/linux/ftrace_event.h \
+  include/linux/ring_buffer.h \
+    $(wildcard include/config/ring/buffer/allow/swap.h) \
+  include/linux/kmemcheck.h \
+  include/linux/poll.h \
+  include/uapi/linux/poll.h \
+  arch/arm64/include/generated/asm/poll.h \
+  include/uapi/asm-generic/poll.h \
+  include/linux/trace_seq.h \
+  include/linux/perf_event.h \
+    $(wildcard include/config/function/tracer.h) \
+    $(wildcard include/config/cgroup/perf.h) \
+    $(wildcard include/config/cpu/sup/intel.h) \
+  include/uapi/linux/perf_event.h \
+  arch/arm64/include/asm/perf_event.h \
+    $(wildcard include/config/hw/perf/events.h) \
+  arch/arm64/include/generated/asm/local64.h \
+  include/asm-generic/local64.h \
+  arch/arm64/include/generated/asm/local.h \
+  include/asm-generic/local.h \
+  include/linux/ftrace.h \
+    $(wildcard include/config/dynamic/ftrace/with/regs.h) \
+    $(wildcard include/config/dynamic/ftrace.h) \
+    $(wildcard include/config/stack/tracer.h) \
+    $(wildcard include/config/frame/pointer.h) \
+  include/linux/trace_clock.h \
+  arch/arm64/include/generated/asm/trace_clock.h \
+  include/asm-generic/trace_clock.h \
+  include/linux/kallsyms.h \
+  arch/arm64/include/asm/ftrace.h \
+  arch/arm64/include/asm/insn.h \
+  include/linux/compat.h \
+    $(wildcard include/config/compat/old/sigaction.h) \
+  include/linux/socket.h \
+  arch/arm64/include/generated/asm/socket.h \
+  include/uapi/asm-generic/socket.h \
+  arch/arm64/include/generated/asm/sockios.h \
+  include/uapi/asm-generic/sockios.h \
+  include/uapi/linux/sockios.h \
+  include/linux/uio.h \
+  include/uapi/linux/uio.h \
+  include/uapi/linux/socket.h \
+  include/uapi/linux/if.h \
+  include/uapi/linux/hdlc/ioctl.h \
+  include/linux/cpu.h \
+    $(wildcard include/config/pm/sleep/smp.h) \
+  include/linux/node.h \
+    $(wildcard include/config/memory/hotplug/sparse.h) \
+  include/linux/irq_work.h \
+    $(wildcard include/config/irq/work.h) \
+  arch/arm64/include/asm/irq_work.h \
+  include/linux/jump_label_ratelimit.h \
+  include/linux/perf_regs.h \
+    $(wildcard include/config/have/perf/regs.h) \
+  arch/arm64/include/uapi/asm/perf_regs.h \
+  include/linux/sysfs_helpers.h \
 
 drivers/leds/leds-max77854-rgb.o: $(deps_drivers/leds/leds-max77854-rgb.o)
 

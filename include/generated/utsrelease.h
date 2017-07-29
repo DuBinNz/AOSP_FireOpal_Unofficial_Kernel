@@ -1,1 +1,1 @@
-#define UTS_RELEASE "3.18.57-Fire_Opal-UNOFFICIAL-v3.2.0-g7dd2781-dirty"
+#define UTS_RELEASE "3.18.57-Fire_Opal-UNOFFICIAL-v3.2.0"

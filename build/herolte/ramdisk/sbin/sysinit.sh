@@ -102,3 +102,36 @@ killall -9 mediaserver
 #Unmount
 mount -o remount,ro /;
 mount -o ro,remount /system
+# Enable FSYNC
+	echo "N" > /sys/module/sync/parameters/fsync_enabled
+
+# Set VM Preferences
+  echo "0" > /proc/sys/vm/laptop_mode
+	echo "1" > /proc/sys/vm/overcommit_memory
+
+# Don't treat storage as rotational
+	echo "0" > /sys/block/mmcblk0/queue/rotational
+	echo "0" > /sys/block/loop0/queue/rotational
+	echo "0" > /sys/block/loop1/queue/rotational
+	echo "0" > /sys/block/loop2/queue/rotational
+	echo "0" > /sys/block/loop3/queue/rotational
+	echo "0" > /sys/block/loop4/queue/rotational
+	echo "0" > /sys/block/loop5/queue/rotational
+	echo "0" > /sys/block/loop6/queue/rotational
+	echo "0" > /sys/block/loop7/queue/rotational
+	echo "0" > /sys/block/ram0/queue/rotational
+	echo "0" > /sys/block/ram1/queue/rotational
+	echo "0" > /sys/block/ram2/queue/rotational
+	echo "0" > /sys/block/ram3/queue/rotational
+	echo "0" > /sys/block/ram4/queue/rotational
+	echo "0" > /sys/block/ram5/queue/rotational
+	echo "0" > /sys/block/ram6/queue/rotational
+	echo "0" > /sys/block/ram7/queue/rotational
+	echo "0" > /sys/block/ram8/queue/rotational
+	echo "0" > /sys/block/ram9/queue/rotational
+	echo "0" > /sys/block/ram10/queue/rotational
+	echo "0" > /sys/block/ram11/queue/rotational
+	echo "0" > /sys/block/ram12/queue/rotational
+	echo "0" > /sys/block/ram13/queue/rotational
+	echo "0" > /sys/block/ram14/queue/rotational
+	echo "0" > /sys/block/ram15/queue/rotational
