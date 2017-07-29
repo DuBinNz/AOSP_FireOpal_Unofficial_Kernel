@@ -47,5 +47,4 @@ const char linux_banner[] =
 const char linux_proc_banner[] =
 	"%s version %s"
 	" (" LINUX_COMPILE_BY "@" LINUX_COMPILE_HOST ")"
-	" (BABUSH)"
 	" (" LINUX_COMPILER ") %s\n";
