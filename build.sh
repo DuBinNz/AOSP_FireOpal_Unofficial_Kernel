@@ -58,7 +58,7 @@ ZIPDIR=$RDIR/build/$MODEL
 PAGE_SIZE=2048
 DTB_PADDING=0
 
-KERNEL_DEFCONFIG=kylothow-$MODEL-eur_defconfig
+KERNEL_DEFCONFIG=babush-$MODEL-eur_defconfig
 
 FUNC_CLEAN_DTB()
 {

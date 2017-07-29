@@ -114,9 +114,18 @@ config CPU_FREQ_DEFAULT_GOV_INTERACTIVE
 
 config CPU_FREQ_DEFAULT_GOV_SMARTMAX_EPS
 	bool "smartmax_eps"
-	select CPU_FREQ_GOV_BLU_ACTIVE
+	select CPU_FREQ_GOV_SMARTMAX_EPS
 	help
 	  Use the CPUFreq governor 'smartmax_eps' as default. This allows
+	  you to get a full dynamic cpu frequency capable system by simply
+	  loading your cpufreq low-level hardware driver, using the
+	  'interactive' governor for latency-sensitive workloads.
+
+config CPU_FREQ_DEFAULT_GOV_RELAXED
+	bool "relaxed"
+	select CPU_FREQ_GOV_RELAXED
+	help
+	  Use the CPUFreq governor 'relaxed' as default. This allows
 	  you to get a full dynamic cpu frequency capable system by simply
 	  loading your cpufreq low-level hardware driver, using the
 	  'interactive' governor for latency-sensitive workloads.

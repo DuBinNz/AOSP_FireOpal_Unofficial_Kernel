@@ -1056,6 +1056,7 @@ static int create_device(struct vnswap *vnswap)
 	snprintf(vnswap->disk->disk_name, 16, "vnswap%d", 0);
 
 	/* Actual capacity set using sysfs (/sys/block/vnswap<id>/disksize) */
+	__set_bit(QUEUE_FLAG_FAST, &vnswap->queue->queue_flags);
 	set_capacity(vnswap->disk, 0);
 
 	/*
