@@ -476,7 +476,7 @@ static void exit_mode(struct cpufreq_interactive_tunables * tunables)
 static void cpufreq_interactive_timer(unsigned long data)
 {
 	u64 now;
-	unsigned int delta_time;
+	u64 delta_time;
 	u64 cputime_speedadj;
 	int cpu_load;
 	struct cpufreq_interactive_cpuinfo *pcpu =

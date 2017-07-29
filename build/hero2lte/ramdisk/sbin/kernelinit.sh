@@ -95,15 +95,15 @@ echo "0" > /sys/block/mmcblk0/queue/iostats
 
 # Set I/O Scheduler tweaks sdb
 	chmod 644 /sys/block/sdb/queue/scheduler
-  echo maple > /sys/block/sdb/queue/scheduler
+  echo deadline > /sys/block/sdb/queue/scheduler
 
 # Set I/O Scheduler tweaks sdc
 	chmod 644 /sys/block/sdc/queue/scheduler
-	echo "maple" > /sys/block/sdc/queue/scheduler
+	echo deadline > /sys/block/sdc/queue/scheduler
 
 # Set I/O Scheduler tweaks sdd
 	chmod 644 /sys/block/sdd/queue/scheduler
-	echo "maple" > /sys/block/sdd/queue/scheduler
+	echo deadline > /sys/block/sdd/queue/scheduler
 
 # network
 sysctl -w net.ipv4.tcp_congestion_control=westwood
