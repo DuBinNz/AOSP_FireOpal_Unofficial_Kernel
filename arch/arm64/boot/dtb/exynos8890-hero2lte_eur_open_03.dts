@@ -1,24 +1,24 @@
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts"
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts"
-# 12 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts"
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts"
+# 12 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts"
 /dts-v1/;
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi" 1
-# 12 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi"
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 1
-# 16 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi"
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi" 1
+# 12 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi"
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 1
+# 16 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi"
 /memreserve/ 0xF0000000 0x8800000;
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/include/dt-bindings/clock/exynos8890.h" 1
-# 18 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/include/dt-bindings/ufs/ufs.h" 1
-# 19 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/include/dt-bindings/sysmmu/sysmmu.h" 1
-# 20 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/include/dt-bindings/thermal/thermal.h" 1
-# 21 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-pinctrl.dtsi" 1
-# 15 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-pinctrl.dtsi"
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/include/dt-bindings/clock/exynos8890.h" 1
+# 18 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/include/dt-bindings/ufs/ufs.h" 1
+# 19 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/include/dt-bindings/sysmmu/sysmmu.h" 1
+# 20 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/include/dt-bindings/thermal/thermal.h" 1
+# 21 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-pinctrl.dtsi" 1
+# 15 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-pinctrl.dtsi"
 / {
 
  pinctrl@10580000 {
@@ -1127,17 +1127,17 @@
  };
 
 };
-# 22 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-busmon.dtsi" 1
-# 16 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-busmon.dtsi"
+# 22 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-busmon.dtsi" 1
+# 16 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-busmon.dtsi"
 / {
  BUSMON@0 {
   compatible = "samsung,exynos-busmonitor";
  };
 };
-# 23 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-ess.dtsi" 1
-# 16 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-ess.dtsi"
+# 23 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-ess.dtsi" 1
+# 16 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-ess.dtsi"
 / {
  exynos-snapshot {
 
@@ -1600,7 +1600,7 @@
   };
  };
 };
-# 24 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
+# 24 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890.dtsi" 2
 / {
  compatible = "samsung,armv8", "samsung,exynos8890";
  interrupt-parent = <&gic>;
@@ -4862,9 +4862,9 @@
 
  };
 };
-# 13 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-rmem.dtsi" 1
-# 12 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-rmem.dtsi"
+# 13 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-rmem.dtsi" 1
+# 12 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-rmem.dtsi"
 / {
  reserved-memory {
   #address-cells = <2>;
@@ -4952,9 +4952,9 @@
   };
  };
 };
-# 14 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/modem-ss335ap-pdata.dtsi" 1
-# 12 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/modem-ss335ap-pdata.dtsi"
+# 14 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/modem-ss335ap-pdata.dtsi" 1
+# 12 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/modem-ss335ap-pdata.dtsi"
 / {
 
  mif_pdata {
@@ -5284,9 +5284,9 @@
   shmem,ipc_size = <0x800000>;
  };
 };
-# 15 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-display-lcd.dtsi" 1
-# 12 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-display-lcd.dtsi"
+# 15 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-display-lcd.dtsi" 1
+# 12 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-display-lcd.dtsi"
 / {
  s6e3ha2k: s6e3ha2k_wqhd {
   mode = <2>;
@@ -5415,7 +5415,7 @@
  };
 
 };
-# 16 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi" 2
+# 16 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi" 2
 
 / {
  model = "Samsung UNIVERSAL8890 board based on EXYNOS8890_EVT1";
@@ -7066,7 +7066,7 @@
    samsung,pin-pud = <1>;
    samsung,pin-drv = <3>;
   };
-# 1681 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi"
+# 1681 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi"
   ssp_batch_wake_irq: ssp-batch-wake-irq {
    samsung,pins = "gpa3-1";
    samsung,pin-function = <0xf>;
@@ -7523,7 +7523,7 @@
    i2c_ch = <2>;
   };
  };
-# 2145 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi"
+# 2145 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi"
  fimc_is_sensor0: fimc_is_sensor@14000000 {
   scenario = <0>;
   id = <0>;
@@ -7617,7 +7617,7 @@
   };
 
   fimc_is_dvfs {
-# 2280 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi"
+# 2280 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi"
    table0 {
     desc = "dvfs table v0.4 for 16M/5M";
 
@@ -8371,7 +8371,7 @@
  argos {
   compatible = "samsung,argos";
   #address-cells = <1>;
-# 3053 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi"
+# 3053 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi"
   boot_device@1 {
    net_boost,label="IPC";
    net_boost,node="rmnet0 rmnet1 rmnet2 rmnet3 rmnet4 rmnet5 rmnet6 rmnet7 umts_dm0";
@@ -8382,7 +8382,7 @@
     300 0 0 1586000 0 1794000 0 0 1 0
     >;
   };
-# 3072 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi"
+# 3072 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-herolte_common.dtsi"
   boot_device@2 {
    net_boost,label="UFS";
    net_boost,node="";
@@ -8492,11 +8492,11 @@
   };
  };
 };
-# 14 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_gpio_03.dtsi" 1
-# 12 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_gpio_03.dtsi"
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos_gpio_config_macros.dtsi" 1
-# 13 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_gpio_03.dtsi" 2
+# 14 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_gpio_03.dtsi" 1
+# 12 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_gpio_03.dtsi"
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos_gpio_config_macros.dtsi" 1
+# 13 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_gpio_03.dtsi" 2
 
 
 &pinctrl_1 {
@@ -8859,11 +8859,11 @@
   gpf1-2 { samsung,pins = "gpf1-2"; samsung,pin-con-pdn = <2>; samsung,pin-pud-pdn = <1>; };
  };
 };
-# 15 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_battery_eur_03.dtsi" 1
-# 12 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_battery_eur_03.dtsi"
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_battery.dtsi" 1
-# 12 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_battery.dtsi"
+# 15 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_battery_eur_03.dtsi" 1
+# 12 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_battery_eur_03.dtsi"
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_battery.dtsi" 1
+# 12 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_battery.dtsi"
 / {
  pinctrl@10580000 {
   wpc_int: wpc-int {
@@ -9257,7 +9257,7 @@
    >;
  };
 };
-# 13 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_battery_eur_03.dtsi" 2
+# 13 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_battery_eur_03.dtsi" 2
 / {
  pinctrl@10580000 {
   wpc_det: wpc-det {
@@ -9285,9 +9285,9 @@
   fuelgauge,capacity = <0x0EA8>;
  };
 };
-# 16 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-sound-cs47l91.dtsi" 1
-# 12 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-sound-cs47l91.dtsi"
+# 16 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-sound-cs47l91.dtsi" 1
+# 12 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-sound-cs47l91.dtsi"
 / {
  spi_0: spi@14d20000 {
   /delete-property/ dma-mode;
@@ -9522,9 +9522,9 @@
  };
 
 };
-# 17 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-luckylte_mst.dtsi" 1
-# 13 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-luckylte_mst.dtsi"
+# 17 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-luckylte_mst.dtsi" 1
+# 13 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-luckylte_mst.dtsi"
 / {
  sec-mst{
   compatible = "sec-mst";
@@ -9565,9 +9565,9 @@
   };
  };
 };
-# 18 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_fingerprint-sensor_03.dtsi" 1
-# 14 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_fingerprint-sensor_03.dtsi"
+# 18 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_fingerprint-sensor_03.dtsi" 1
+# 14 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_fingerprint-sensor_03.dtsi"
 / {
  pinctrl@10580000 {
   btp_irq: btp-irq {
@@ -9688,9 +9688,9 @@
   };
  };
 };
-# 19 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_display_00.dtsi" 1
-# 13 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_display_00.dtsi"
+# 19 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_display_00.dtsi" 1
+# 13 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_display_00.dtsi"
 / {
 
  decon_f: decon_f@0x13960000 {
@@ -9714,9 +9714,9 @@
   regulator_18V = "vdd_1p8_ddi";
  };
 };
-# 20 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_motor.dtsi" 1
-# 12 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_motor.dtsi"
+# 20 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_motor.dtsi" 1
+# 12 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_motor.dtsi"
 / {
  haptic {
   status = "okay";
@@ -9729,9 +9729,9 @@
   haptic,regulator_name = "VDD_MOT_3.3V";
  };
 };
-# 21 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
-# 1 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_svcled.dtsi" 1
-# 12 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_svcled.dtsi"
+# 21 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
+# 1 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_svcled.dtsi" 1
+# 12 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_svcled.dtsi"
 / {
  rgb {
   led_device_type = <1>;
@@ -9774,7 +9774,7 @@
   br_ratio_b_pg = <500>;
  };
 };
-# 22 "/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
+# 22 "/mnt/AOSP_FireOpal_Unofficial_Kernel/arch/arm64/boot/dts/exynos8890-hero2lte_eur_open_03.dts" 2
 
 / {
  model = "Samsung UNIVERSAL8890 board based on EXYNOS8890";

@@ -7,11 +7,11 @@
 // -I arch/arm64/include/generated -I include -I ./arch/arm64/include/uapi
 // -I arch/arm64/include/generated/uapi -I ./include/uapi
 // -I include/generated/uapi
-// -iprefix /media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/6.3.1/
+// -iprefix /mnt/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/6.3.1/
 // -D __KERNEL__ -D NDEBUG -D KBUILD_STR(s)=#s
 // -D KBUILD_BASENAME=KBUILD_STR(bounds)
 // -D KBUILD_MODNAME=KBUILD_STR(bounds)
-// -isystem /media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/6.3.1/include
+// -isystem /mnt/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/6.3.1/include
 // -include ./include/linux/kconfig.h -MD kernel/.bounds.s.d
 // kernel/bounds.c -mbionic -mlittle-endian -mlow-precision-recip-sqrt
 // -mcpu=cortex-a57.cortex-a53 -mtune=cortex-a57.cortex-a53
@@ -838,8 +838,8 @@ foo:
 	.string	"PG_private_2"
 .LASF43:
 	.string	"SYSTEM_BOOTING"
-.LASF53:
-	.string	"pageflags"
+.LASF90:
+	.string	"/mnt/AOSP_FireOpal_Unofficial_Kernel"
 .LASF89:
 	.string	"kernel/bounds.c"
 .LASF10:
@@ -896,6 +896,8 @@ foo:
 	.string	"prove_locking"
 .LASF72:
 	.string	"PG_reclaim"
+.LASF53:
+	.string	"pageflags"
 .LASF55:
 	.string	"PG_error"
 .LASF8:
@@ -990,7 +992,5 @@ foo:
 	.string	"PG_swapbacked"
 .LASF74:
 	.string	"PG_unevictable"
-.LASF90:
-	.string	"/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel"
 	.ident	"GCC: (UBERTC-6.x.x) 6.3.1 20170528"
 	.section	.note.GNU-stack,"",@progbits

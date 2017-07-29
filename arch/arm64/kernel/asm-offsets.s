@@ -7,11 +7,11 @@
 // -I arch/arm64/include/generated -I include -I ./arch/arm64/include/uapi
 // -I arch/arm64/include/generated/uapi -I ./include/uapi
 // -I include/generated/uapi
-// -iprefix /media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/6.3.1/
+// -iprefix /mnt/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/6.3.1/
 // -D __KERNEL__ -D NDEBUG -D KBUILD_STR(s)=#s
 // -D KBUILD_BASENAME=KBUILD_STR(asm_offsets)
 // -D KBUILD_MODNAME=KBUILD_STR(asm_offsets)
-// -isystem /media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/6.3.1/include
+// -isystem /mnt/aarch64-uber-linux-android-6.3.1-20170616/bin/../lib/gcc/aarch64-linux-android/6.3.1/include
 // -include ./include/linux/kconfig.h
 // -MD arch/arm64/kernel/.asm-offsets.s.d arch/arm64/kernel/asm-offsets.c
 // -mbionic -mlittle-endian -mlow-precision-recip-sqrt
@@ -16530,6 +16530,8 @@ main:
 	.string	"state_remove_uevent_sent"
 .LASF171:
 	.string	"personality"
+.LASF1641:
+	.string	"/mnt/AOSP_FireOpal_Unofficial_Kernel"
 .LASF319:
 	.string	"jiffies"
 .LASF389:
@@ -19084,8 +19086,6 @@ main:
 	.string	"sysctl_overcommit_memory"
 .LASF912:
 	.string	"max_interval"
-.LASF1641:
-	.string	"/media/muhammed/926acc40-21ea-4312-b2b5-f7c27359cb20/AOSP_FireOpal_Unofficial_Kernel"
 .LASF224:
 	.string	"notifier_data"
 .LASF1599:

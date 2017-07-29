@@ -38616,7 +38616,7 @@ ffffffc000d9a000 r __func__.41044
 ffffffc000d9a000 R __start_rodata
 ffffffc000d9a018 r __param_str_initcall_debug
 ffffffc000d9a028 R linux_proc_banner
-ffffffc000d9a088 R linux_banner
+ffffffc000d9a080 R linux_banner
 ffffffc000d9b038 r aarch32_regsets
 ffffffc000d9b0a8 r user_aarch32_view
 ffffffc000d9b0c8 r user_aarch64_view
