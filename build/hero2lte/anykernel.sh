@@ -4,7 +4,8 @@
 ## AnyKernel setup
 # begin properties
 properties() {
-kernel.string=Fire Opal Kernel-UNOFFICIAL by BABUSH
+kernel.string=Fire Opal UNOFFICIAL by BABUSH
+kernel.version=3.3.0
 do.devicecheck=1
 do.modules=0
 do.cleanup=1
@@ -31,7 +32,6 @@ chmod 750 $ramdisk/init.services.rc
 chmod 750 $ramdisk/sbin/kernelinit.sh
 chmod 750 $ramdisk/sbin/resetprop
 chmod 750 $ramdisk/sbin/sysinit.sh
-chmod 750 $ramdisk/sbin/sokokern.sh
 chmod 750 $ramdisk/sbin/wakelocks.sh
 chmod 750 $ramdisk/sbin/spec.sh
 

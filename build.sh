@@ -15,7 +15,7 @@
 #
 
 KERNEL_NAME="Fire_Opal-UNOFFICIAL"
-KERNEL_VERSION="3.2.0"
+KERNEL_VERSION="3.3.0"
 
 if [ $1 == 1 ] || [ $1 == 3 ] ; then
 	export MODEL=herolte
@@ -58,7 +58,7 @@ ZIPDIR=$RDIR/build/$MODEL
 PAGE_SIZE=2048
 DTB_PADDING=0
 
-KERNEL_DEFCONFIG=babush-$MODEL-eur_defconfig
+KERNEL_DEFCONFIG=config-$MODEL-$VARIANT_defconfig
 
 FUNC_CLEAN_DTB()
 {

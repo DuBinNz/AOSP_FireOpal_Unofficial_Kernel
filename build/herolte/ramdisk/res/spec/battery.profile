@@ -2,7 +2,7 @@
 
    # Little CPU
    chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-   echo powersave > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+   echo smartmax_eps > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
    chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
    echo 130000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
    chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
@@ -14,7 +14,7 @@
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
    echo 208000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-   echo 2080000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+   echo 1872000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
    echo 99 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay

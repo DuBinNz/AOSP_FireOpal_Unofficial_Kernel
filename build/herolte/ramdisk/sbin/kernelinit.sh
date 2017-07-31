@@ -26,19 +26,11 @@ $BB mount -o remount,rw /;
 
 
 # cpu - little
-echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo "blu_active" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
 # cpu - big
-echo "interactive" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+echo "blu_active" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 
-# zram
-#swapoff "/dev/block/zram0/" > dev/null 2>&1
-#echo "1" > /sys/block/zram0/reset
-#echo "536870912" > sys/block/zram0/disksize
-#mkswap "/dev/block/zram0/" > dev/null 2>&1
-#swapon "/dev/block/zram0/" > dev/null 2>&1
-#echo "lz4" > /sys/block/zram0/comp_algorithm
-#echo "4" > /sys/block/zram0/max_comp_streams
 
 # vm
 echo "0" > /proc/sys/vm/page-cluster
@@ -46,6 +38,7 @@ echo "0" > /proc/sys/vm/page-cluster
 # miscellaneous
 # Enable FSYNC
 	echo "N" > /sys/module/sync/parameters/fsync_enabled
+
 # storage - internal
 echo "cfq" > /sys/block/sda/queue/scheduler
 echo "128" > /sys/block/sda/queue/read_ahead_kb

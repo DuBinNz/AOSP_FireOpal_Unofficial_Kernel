@@ -46,11 +46,11 @@ bb=/tmp/anykernel/tools/busybox;
 
 ui_print " ";
 ui_print "##################################################";
-ui_print "#                                                #";
-ui_print "# $(file_getprop /tmp/anykernel/anykernel.sh kernel.string)  #";
-ui_print "#                                                #";
-ui_print "# AnyKernel2 by osm0sis @ xda-developers         #";
-ui_print "#                                                #";
+ui_print "#                                                                                                #";
+ui_print "# $(file_getprop /tmp/anykernel/anykernel.sh kernel.string)     #";
+ui_print "# $(file_getprop /tmp/anykernel/anykernel.sh kernel.version)  #";
+ui_print "# AnyKernel2 by osm0sis @ xda-developers                           #";
+ui_print "#                                                                                                #";
 ui_print "##################################################";
 ui_print " ";
 umount /system 2>/dev/null;
@@ -106,7 +106,8 @@ esac;
 if [ "$(file_getprop /tmp/anykernel/anykernel.sh do.cleanup)" == 1 ]; then
   cleanup;
 fi;
-
+    ui_print " > Fixing Permissions...";
+    ui_print " > Configuration the Kernel..."
 umount /system;
 umount /data;
 ui_print " ";
